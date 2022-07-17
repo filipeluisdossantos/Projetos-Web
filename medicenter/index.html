@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            document.querySelector(".menu-mobile").addEventListener("click", function(){
+                if (document.querySelector("nav ul").style.display == 'flex'){
+                    document.querySelector("nav ul").style.display = 'none';
+                     } else {
+                        document.querySelector("nav ul").style.display = 'flex';
+                }
+            });
+        };
+    </script>
+    <title>MediCenter</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="assets/images/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <div class="menu-mobile">
+                    <div class="mm-line"></div>
+                    <div class="mm-line"></div>
+                    <div class="mm-line"></div>
+                </div>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Departamentos</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container column">
+            <div class="banner-headlines">
+                <h1>Experiência de Alto Nível</h1>
+                <h2>Medicenter é um modelo responsivo perfeito para todos os tamanhos de tela</h2>
+            </div>
+            <section class="banner-options">
+                <div class="options1">
+                    <h3>Caso de Emergência</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quibusdam est vitae et tenetur ipsum incidunt facilis natus consectetur laboriosam dolor ab</p>
+                    <a href="#">Leia mais...</a>
+                </div>
+                <div class="options2">
+                    <h3>Horário dos Médicos</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam amet aspernatur, quae illo fugiat voluptatibus quas cum laborum quo sint!</p>
+                    <a href="#">Leia mais...</a>
+                </div>
+                <div class="options3">
+                    <h3>Horário de Funcionamento</h3>
+                    <div class="horario1">
+                        <p>Segunda - Sexta</p>
+                        <p>08:00 - 17:00</p>
+                    </div>
+                    <div class="horario2">
+                        <p>Sábado</p>
+                        <p>09:30 - 17:30</p>
+                    </div>
+                    <div class="horario3">
+                        <p>Domingo</p>
+                        <p>09:30 - 15:00</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="geral">
+        <div class="container">
+            <section class="news">
+                <div class="widget">
+                    <div class="widget-title">
+                        <h3>Últimas Notícias</h3>
+                        <div class="widget-title-bar"></div>
+                    </div>
+                    <div class="widget-body-news">
+                        <article>
+                            <a href="#">
+                                <div class="news-data">
+                                    <span class="news-posting-date">17 Jun 22</span>
+                                    <span class="comment">2</span>
+                                </div>
+                                <img src="./assets/media/noticia.jpg" alt="imagem de uma médica">
+                                <h2>Lorem ipsum dolor sit amat velum</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, eveniet? Porro alias voluptates eligendi id magni, similique, inventore necessitatibus quo vel itaque iure officiis, explicabo reprehenderit autem voluptatum dolore ipsam.</p>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="#">
+                                <div class="news-data">
+                                    <span class="news-posting-date">17 Jun 22</span>
+                                    <span class="comment">2</span>
+                                </div>
+                                <img src="./assets/media/noticia.jpg" alt="imagem de uma médica">
+                                <h2>Lorem ipsum dolor sit amat velum</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, eveniet? Porro alias voluptates eligendi id magni, similique, inventore necessitatibus quo vel itaque iure officiis, explicabo reprehenderit autem voluptatum dolore ipsam.</p>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="#">
+                                <div class="news-data">
+                                    <span class="news-posting-date">17 Jun 22</span>
+                                    <span class="comment">2</span>
+                                </div>
+                                <img src="./assets/media/noticia.jpg" alt="imagem de uma médica">
+                                <h2>Lorem ipsum dolor sit amat velum</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, eveniet? Porro alias voluptates eligendi id magni, similique, inventore necessitatibus quo vel itaque iure officiis, explicabo reprehenderit autem voluptatum dolore ipsam.</p>
+                            </a>
+                        </article>
+                        
+                        <article>
+                            <a href="#">
+                                <div class="news-data">
+                                    <span class="news-posting-date">17 Jun 22</span>
+                                    <span class="comment">2</span>
+                                </div>
+                                <img src="./assets/media/noticia.jpg" alt="imagem de uma médica">
+                                <h2>Lorem ipsum dolor sit amat velum</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, eveniet? Porro alias voluptates eligendi id magni, similique, inventore necessitatibus quo vel itaque iure officiis, explicabo reprehenderit autem voluptatum dolore ipsam.</p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="widget">
+                    <div class="widget-title">
+                        <h3>Departamento</h3>
+                        <div class="widget-title-bar"></div>
+                    </div>
+                    <div class="widget-body-depart">
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                        <a href="#">
+                            <div class="depart-box"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget-title">
+                        <h3>Marque uma Consulta</h3>
+                        <div class="widget-title-bar"></div>
+                    </div>
+                    <div class="widget-body-consulta">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque et magnam eaque corporis repudiandae</p>
+                        <div class="widget-contato">
+                            <img src="./assets/images/tel.png" alt="ícone do telefone"><span>Tel: (00)-0000-0000</span>
+                        </div>
+                        <div class="widget-contato">
+                            <img src="./assets/images/tel.png" alt=""><span>WhatsApp: (00)00000-0000</span>
+                        </div>
+                        <div class="widget-contato">
+                            <img src="./assets/images/email.png" alt=""><span>Email: exemplo@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <footer>
+        <div class="container column">
+            <section class="footer-menu">
+                <div class="fm-1">
+                    <a href="#">
+                        <h2>Plano de Saúde</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </a>
+                </div>
+                <div class="fm-2">
+                    <a href="#">
+                        <h2>Registros Médicos</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </a>
+                </div>
+                <div class="fm-3">
+                    <a href="#">
+                        <h2>Pagamentos Online</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    </a>
+                </div>
+            </section>
+            <section class="footer-information">
+                <div class="footer-info-box">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <a href="#">
+                                <h3>Clínica Medicenter</h3>
+                            </a>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <a href="#">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+                        <div class="widget-body-info">
+                           <div class="info-endereco">
+                                <p>Medicenter Clínica - R: xxxxxxxxxx - 000 - xxxxxxx - xxxxxx</p>
+                           </div>
+                           <div class="info-contato">
+                            <p>+55(47) 1234-56-67</p>
+                            <p>exemplo@gmail.com</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info-box">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <a href="#">
+                                <h3>Últimas Postagens</h3>
+                            </a>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body">
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info-box">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <a href="#">
+                                <h3>Últimos Tweets</h3>
+                            </a>
+                            <div class="widget-title-bar"></div>
+                        </div>
+                        <div class="widget-body">
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p class="info-date">20 Jun 2022</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer-copy">
+                <p>Copyright - Todos os direitos reservados.</p>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
