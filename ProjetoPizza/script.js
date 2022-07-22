@@ -1,5 +1,7 @@
 let modalQt = 1;
 
+//Listagem das Pizzas
+
 pizzaJson.map(function(item, index) {
     let pizzaItem = document.querySelector('.models .pizza-item').cloneNode(true); //clonando a div pizza-item por completo.
 
@@ -8,6 +10,9 @@ pizzaJson.map(function(item, index) {
     pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`; //toFixed(2) pega 2 casas depois virg.
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+
+    // Abrindo o modal
+
     pizzaItem.querySelector('a').addEventListener('click', function(e){
         e.preventDefault(); //Previna ação padrão.Bloqueia ação de atualizar a tela
         let key = e.target.closest('.pizza-item').getAttribute('data-key'); //target ir pelo próprio elemento-- closest item mais proximo que tenha a classe -
@@ -36,4 +41,17 @@ pizzaJson.map(function(item, index) {
 
 
     document.querySelector('.pizza-area').append( pizzaItem);
+});
+
+//Fechando o Modal
+
+function closeModal() {
+    document.querySelector('.pizzaWindowArea').style.opacity = 0;
+    setTimeout(() => {
+        document.querySelector('.pizzaWindowArea').style.display = 'none';
+    }, 500);
+}
+
+document.querySelectorAll('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach(function(item){
+    item.addEventListener('click', closeModal);  // Outra opção é add evento onclick direto no html chamando apenas a função(CloseModal).
 });
