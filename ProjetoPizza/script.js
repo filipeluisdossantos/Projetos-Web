@@ -86,14 +86,33 @@ document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
 // Habilitando o botão de adicionar o carrinho.
 
 document.querySelector('.pizzaInfo--addButton').addEventListener('click', ()=>{
-    let size =  parseInt(document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key'));
+    let size = parseInt(document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key'));
+    let identifier = pizzaJson[modalKey].id +'@'+size;
+    let key = cart.findIndex((item)=>item.identifier == identifier);
 
-    cart.push({
-        id: pizzaJson[modalKey].id,
-        size: size,
-        qt: modalQt
-    });
+        if(key > -1) {
+            cart[key].qt += modalQt;
+        } else {
+            cart.push({
+                identifier,
+                id: pizzaJson[modalKey].id,
+                size: size,
+                qt: modalQt
+            });
+        }
     
+    updateCart();
     closeModal();
 });
 
+function updateCart(){
+    if(cart.length > 0) {
+        document.querySelector('aside').classList.add('show');
+        for(let i in cart) {
+            let pizzaItem = pizzaJson.find((item)=>item.id == cart[i].id);
+
+        }
+    }else {
+        document.querySelector('aside').classList.remove('show');
+    }
+}
