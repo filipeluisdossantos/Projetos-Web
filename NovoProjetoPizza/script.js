@@ -1,14 +1,34 @@
+let modalQt = 1;
+
 pizzaJson.map((item, index)=> {
     let pizzaItem = document.querySelector('.models .pizza-item').cloneNode(true);
 
-
+    pizzaItem.setAttribute('index', index);
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
     pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+
+    //Abrindo o Modal ao clicar
+
     pizzaItem.querySelector('a').addEventListener('click',(e)=>{
         e.preventDefault();
+        let i = e.target.closest('.pizza-item').getAttribute('index');//closest = pega o elemento mais proximo do a (pizza-item)
+        modalQt = 1;
 
+        document.querySelector('.pizzaBig img').src = pizzaJson[i].img
+        document.querySelector('.pizzaInfo h1').innerHTML = pizzaJson[i].name;
+        document.querySelector('.pizzaInfo--desc').innerHTML = pizzaJson[i].description;
+        document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
+        document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
+            if(sizeIndex ==2){
+                sizeItem.classList.add('selected');
+            }
+            sizeItem.querySelector('span').innerHTML = pizzaJson[i].sizes[sizeIndex];
+        });
+
+        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[i].price.toFixed(2)}`;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
         document.querySelector('.pizzaWindowArea').style.opacity = '0';
         document.querySelector('.pizzaWindowArea').style.display = 'flex';
         setTimeout(()=>{
