@@ -1,4 +1,6 @@
+let cart = [];
 let modalQt = 1;
+let modalIndex = 0;
 
 pizzaJson.map((item, index)=> {
     let pizzaItem = document.querySelector('.models .pizza-item').cloneNode(true);
@@ -15,6 +17,8 @@ pizzaJson.map((item, index)=> {
         e.preventDefault();
         let i = e.target.closest('.pizza-item').getAttribute('index');//closest = pega o elemento mais proximo do a (pizza-item)
         modalQt = 1;
+        modalIndex = i;
+
 
         document.querySelector('.pizzaBig img').src = pizzaJson[i].img
         document.querySelector('.pizzaInfo h1').innerHTML = pizzaJson[i].name;
@@ -39,3 +43,59 @@ pizzaJson.map((item, index)=> {
 
     document.querySelector('.pizza-area').append(pizzaItem);
 });
+
+// Eventos do modal
+
+function closeModal() {
+    document.querySelector('.pizzaWindowArea').style.opacity = '0';
+    setTimeout(()=>{
+        document.querySelector('.pizzaWindowArea').style.display = 'none';
+    },500);
+}
+
+document.querySelectorAll('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
+    item.addEventListener('click', closeModal);
+});
+
+document.querySelector('.pizzaInfo--qtmenos').addEventListener('click', ()=>{
+    if(modalQt > 1){
+        modalQt--;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+document.querySelector('.pizzaInfo--qtmais').addEventListener('click', ()=>{
+    modalQt++;
+    document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+});
+
+document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
+    sizeItem.addEventListener('click',()=>{
+        document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
+        sizeItem.classList.add('selected');
+    });
+});
+
+// adicionando pizza no carrinho
+
+document.querySelector('.pizzaInfo--addButton').addEventListener('click', ()=>{
+    let size = parseInt(document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key'));
+
+    let identifier = pizzaJson[modalIndex].id+'@'+size;
+
+    let key = cart.findIndex((item)=>{
+        return item.identifier == identifier
+    });
+
+    if(key > -1){
+        cart[key].qt += modalQt;
+    } else {
+        cart.push({
+            identifier,
+            id:pizzaJson[modalIndex].id,
+            size,
+            qt:modalQt
+        });
+    }
+
+    closeModal();
+}); 
