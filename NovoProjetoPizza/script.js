@@ -51,6 +51,10 @@ function closeModal() {
     setTimeout(()=>{
         document.querySelector('.pizzaWindowArea').style.display = 'none';
     },500);
+    window.scrollTo({ // moves screen to the top smoothly
+        top: 0,
+        behavior: 'smooth'
+      });
 }
 
 document.querySelectorAll('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
