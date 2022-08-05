@@ -20,7 +20,7 @@ pizzaJson.map((item, index)=> {
         modalIndex = i;
 
 
-        document.querySelector('.pizzaBig img').src = pizzaJson[i].img
+        document.querySelector('.pizzaBig img').src = pizzaJson[i].img;
         document.querySelector('.pizzaInfo h1').innerHTML = pizzaJson[i].name;
         document.querySelector('.pizzaInfo--desc').innerHTML = pizzaJson[i].description;
         document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');

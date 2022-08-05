@@ -1,3 +1,6 @@
+let modalQt = 1;
+let cart = [];
+
 
 //Listando as Pizzas.
 
@@ -15,12 +18,76 @@ pizzaJson.map((item, index)=>{
     pizzaItem.querySelector('.pizza-item a').addEventListener('click',(e)=>{
         e.preventDefault();
         let i = e.target.closest('.pizza-item').getAttribute('index');
+        modalQt = 1;
 
-        
+        document.querySelector('.pizzaBig img').src = pizzaJson[i].img;
+        document.querySelector('.pizzaInfo h1').innerHTML = pizzaJson[i].name;
+        document.querySelector('.pizzaInfo--desc').innerHTML = pizzaJson[i].description;
+        document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
+        document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=> {
+            if(sizeIndex == 2){
+                sizeItem.classList.add('selected');
+            }
+            sizeItem.querySelector('span').innerHTML = pizzaJson[i].sizes[sizeIndex];
+        });
+
+        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[i].price.toFixed(2)}`;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+        document.querySelector('.pizzaWindowArea').style.opacity = '0';
         document.querySelector('.pizzaWindowArea').style.display = 'flex';
-
+        setTimeout(()=>{
+            document.querySelector('.pizzaWindowArea').style.opacity = '1';
+        },200);  
     });
 
 
     document.querySelector('.pizza-area').append(pizzaItem);
 });
+
+//Eventos dos Modal
+
+//Função selecionar tamanho
+
+document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=> {
+    sizeItem.addEventListener('click', ()=>{
+        document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
+        sizeItem.classList.add('selected');
+    });
+});
+    
+//Função alterar Quantidade
+
+document.querySelector('.pizzaInfo--qtmenos').addEventListener('click',()=>{
+    if(modalQt > 1){
+        modalQt--;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+document.querySelector('.pizzaInfo--qtmais').addEventListener('click',()=>{
+    modalQt++;
+    document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+});
+
+//Função Cancelar
+
+document.querySelectorAll('.pizzaInfo--cancelMobileButton, .pizzaInfo--cancelButton').forEach((item)=>{
+    item.addEventListener('click', closeModal);
+});
+
+function closeModal() {
+    document.querySelector('.pizzaWindowArea').style.opacity = '0';
+    setTimeout(()=>{
+        document.querySelector('.pizzaWindowArea').style.display = 'none';
+    },500);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+//Função adicionar carrinho
+
+
+
+
+
