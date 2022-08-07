@@ -114,11 +114,37 @@ function closeModal() {
  function updateCart() {
     if(cart.length > 0) {
         document.querySelector('aside').classList.add('show');
+        document.querySelector('.cart').innerHTML = '';
         for(let i in cart) {
             let pizzaItem = pizzaJson.find((item)=>{
-                return item.id == cart[i].id
+                return item.id == cart[i].id;
             });
+            let cartItem = document.querySelector('.models .cart--item').cloneNode(true);
+
+            let pizzaSize = cart[i].size;
+            let nameSize = `${pizzaItem.name} (${pizzaSize})`;
+
+            cartItem.querySelector('.cart--item img').src = pizzaItem.img;
+            cartItem.querySelector('.cart--item-nome').innerHTML = nameSize;
+            cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+            cartItem.querySelector('.cart--item-qtmenos').addEventListener('click',()=>{
+                if(cart[i].qt > 1) {
+                    cart[i].qt--;
+                }else{
+                    cart.splice(i,1);
+                }
+                updateCart();
+            });
+            cartItem.querySelector('.cart--item-qtmais').addEventListener('click',()=>{
+                cart[i].qt++;
+                updateCart();
+            });
+        
+
+            document.querySelector('.cart').append(cartItem);
+            
         }
+
 
         
 
