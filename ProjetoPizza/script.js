@@ -161,7 +161,6 @@ function updateCart() {
 
             document.querySelector('.cart').append(cartItem);
         }
-
         desconto = subtotal * 0.1;
         total = subtotal - desconto;
 

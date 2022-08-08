@@ -18,17 +18,23 @@ header {
     left:0;
     top:0;
     right:0;
-    height:60px;
-    background-color:#399ade;
-    display:none;
-    justify-content: flex-end;
+    height:90px;
+    background-color:#d7cf07;
+    display:flex;
+    justify-content: flex-start;
     align-items: center;
 }
+
+header h1 {
+    font-family:'Hepta Slab', Helvetica, Arial;
+    padding-left: 80px;
+}
 .menu-openner {
+    display: none;
     margin-right: 15px;
     font-size: 26px;
     background-color: #a9dcff;
-    padding: 5px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 .menu-openner span {
@@ -58,10 +64,9 @@ aside.show {
 main {
     flex:1;
     padding:20px;
+    margin-top: 125px;
 }
-h1 {
-    font-family:'Hepta Slab', Helvetica, Arial;
-}
+
 .pizza-area {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
