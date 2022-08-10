@@ -93,14 +93,19 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
     });
 
     if(key > -1) {
-        
-    }
-
-    cart.push({
-        identifier:identifier,
-        id:pizzaJson[modaIndex].id,
-        size:size,
-        qt:modalQt
-    });
-
+        cart[key].qt+=modalQt;
+    }else {
+        cart.push({
+            identifier:identifier,
+            id:pizzaJson[modaIndex].id,
+            size:size,
+            qt:modalQt
+        });
+    }    
+    closeModal();
+    updateCart();
 });
+
+function updateCart() {
+    
+}
