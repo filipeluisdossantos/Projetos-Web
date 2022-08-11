@@ -107,5 +107,49 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 });
 
 function updateCart() {
-    
+    document.querySelector('.menu-openner span').innerHTML = cart.length;
+    if(cart.length > 0){
+        document.querySelector('aside').classList.add('show');
+        document.querySelector('.cart').innerHTML = '';
+
+        let subtotal = 0;
+        let desconto = 0;
+        let total = 0;
+
+        for(let i in cart) {
+            let pizza = pizzaJson.find((item)=> item.id == cart[i].id);
+            subtotal += pizza.price * cart[i].qt;
+            let cartItem = document.querySelector('.cart--item').cloneNode(true);
+            let nameSize = `${pizza.name} (${cart[i].size})`;
+
+            cartItem.querySelector('img').src = pizza.img;
+            cartItem.querySelector('.cart--item-nome').innerHTML = nameSize;
+            cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+            cartItem.querySelector('.cart--item-qtmenos').addEventListener('click',()=>{
+                if(cart[i].qt > 1) {
+                    cart[i].qt--;
+                    updateCart();
+                } else {
+                    cart.splice(i,1);
+                    updateCart();
+                }
+            });
+            cartItem.querySelector('.cart--item-qtmais').addEventListener('click',()=>{
+                cart[i].qt++;
+                updateCart();
+            });
+
+            document.querySelector('.cart').append(cartItem);
+        }
+        desconto = subtotal * 0.1;
+        total = subtotal - desconto;
+
+        document.querySelector('.subtotal span:last-Child').innerHTML = `R$ ${subtotal.toFixed(2)}`;
+        document.querySelector('.desconto span:last-Child').innerHTML = `R$ ${desconto.toFixed(2)}`;
+        document.querySelector('.total span:last-Child').innerHTML = `R$ ${total.toFixed(2)}`;
+
+    }else {
+        document.querySelector('aside').classList.remove('show');
+    }
+   
 }
