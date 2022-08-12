@@ -53,4 +53,29 @@ document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
 });
 
 //Seleção Quantidade
+document.querySelector('.pizzaInfo--qtmenos').addEventListener('click',()=>{
+    if(modalQt > 1){
+        modalQt--;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+document.querySelector('.pizzaInfo--qtmais').addEventListener('click',()=>{
+    modalQt++;
+    document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+});
 
+//Fechar Modal
+document.querySelectorAll('.pizzaInfo--cancelMobileButton, .pizzaInfo--cancelButton').forEach((item)=>{
+    item.addEventListener('click', closeModal);
+});
+
+function closeModal(){
+    document.querySelector('.pizzaWindowArea').style.opacity = '0';
+        setTimeout(()=>{
+            document.querySelector('.pizzaWindowArea').style.display = 'none';
+        },500);
+    window.scrollTo({
+        top:0,
+        behavior: "smooth"
+    });
+}
