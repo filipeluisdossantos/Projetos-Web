@@ -87,7 +87,7 @@ function closeModal() {
 
 document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
     let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
-    let identifier = pizzaJson[modaIndex].id +'*'+size;
+    let identifier = pizzaJson[modaIndex].id +'*'+ size;
     let key = cart.findIndex((item)=>{
         return item.identifier == identifier;
     });

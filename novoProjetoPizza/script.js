@@ -1,6 +1,7 @@
 let cart = [];
 let modalQt = 1;
 let pizzaIndex;
+let sizeSelected = 0;
 //Listagem das Pizzas
 
 pizzaJson.map((item, index)=>{
@@ -48,6 +49,7 @@ document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
     sizeItem.addEventListener('click',()=>{
         document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
         sizeItem.classList.add('selected');
+        sizeSelected = sizeIndex;
         document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[pizzaIndex].price[sizeIndex]}`;
     });
 });
@@ -78,4 +80,38 @@ function closeModal(){
         top:0,
         behavior: "smooth"
     });
+}
+
+//adicionar ao carrinho
+
+document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
+   let identifier = pizzaJson[pizzaIndex].id + '*' + sizeSelected;
+   let cartIndex = cart.findIndex((item)=>item.identifier == identifier); 
+
+   if(cartIndex > -1) {
+    cart[cartIndex].qt+=modalQt;
+   } else {
+        cart.push({
+            identifier:identifier,
+            id:pizzaJson[pizzaIndex].id,
+            size:sizeSelected,
+            qt:modalQt
+        });
+   }
+
+   closeModal();
+   updateCart();
+});
+
+//Atualizar carrinho
+function updateCart(){
+    if(cart.length > 0) {
+        
+
+
+
+        document.querySelector('aside').classList.add('show');
+    } else {
+        document.querySelector('aside').classList.remove('show');
+    }
 }
