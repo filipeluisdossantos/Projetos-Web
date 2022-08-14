@@ -106,11 +106,20 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 //Atualizar carrinho
 function updateCart(){
     if(cart.length > 0) {
+        document.querySelector('aside').classList.add('show');
+
+        for(let i in cart) {
+            let pizza = pizzaJson.find((item)=>item.id == cart[i].id);
+            let cartItem = document.querySelector('.cart--item').cloneNode(true);
+
+            cartItem.querySelector('.cart--item img').src = pizza.img;
+
+            document.querySelector('.cart').append(cartItem);
+        }
         
 
+        
 
-
-        document.querySelector('aside').classList.add('show');
     } else {
         document.querySelector('aside').classList.remove('show');
     }
