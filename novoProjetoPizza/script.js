@@ -1,7 +1,7 @@
 let cart = [];
 let modalQt = 1;
 let pizzaIndex;
-let sizeSelected = 0;
+let priceSelected = 0;
 //Listagem das Pizzas
 
 pizzaJson.map((item, index)=>{
@@ -9,7 +9,7 @@ pizzaJson.map((item, index)=>{
 
     pizzaItem.setAttribute('index', index);
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
-    pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price[0]}`;
+    pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price[0].toFixed(2)}`;
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
     //Abrindo o Modal
@@ -26,10 +26,12 @@ pizzaJson.map((item, index)=>{
         document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
             if(sizeIndex == 0) {
                 sizeItem.classList.add('selected');
+                priceSelected = pizzaJson[i].price[0].toFixed(2)
             }
             sizeItem.querySelector('span').innerHTML = pizzaJson[i].sizes[sizeIndex];
         });
-        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[i].price[0]}`;
+
+        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${priceSelected}`;
         document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
 
         document.querySelector('.pizzaWindowArea').style.opacity = '0';
@@ -49,8 +51,9 @@ document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
     sizeItem.addEventListener('click',()=>{
         document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
         sizeItem.classList.add('selected');
-        sizeSelected = sizeIndex;
-        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[pizzaIndex].price[sizeIndex]}`;
+        priceSelected = pizzaJson[pizzaIndex].price[sizeIndex];
+        priceSelected = priceSelected.toFixed(2);
+        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${priceSelected}`;
     });
 });
 
@@ -85,8 +88,10 @@ function closeModal(){
 //adicionar ao carrinho
 
 document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
-   let identifier = pizzaJson[pizzaIndex].id + '*' + sizeSelected;
-   let cartIndex = cart.findIndex((item)=>item.identifier == identifier); 
+    let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
+    let identifier = pizzaJson[pizzaIndex].id + '*' + size;
+    let cartIndex = cart.findIndex((item)=>item.identifier == identifier);
+
 
    if(cartIndex > -1) {
     cart[cartIndex].qt+=modalQt;
@@ -94,7 +99,8 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
         cart.push({
             identifier:identifier,
             id:pizzaJson[pizzaIndex].id,
-            size:sizeSelected,
+            size:size,
+            price:priceSelected,
             qt:modalQt
         });
    }
@@ -107,17 +113,43 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 function updateCart(){
     if(cart.length > 0) {
         document.querySelector('aside').classList.add('show');
+        document.querySelector('.cart').innerHTML = '';
+
+        let subtotal = 0;
+        let desconto = 0;
+        let total = 0;
 
         for(let i in cart) {
             let pizza = pizzaJson.find((item)=>item.id == cart[i].id);
+            subtotal += cart[i].price * cart[i].qt;
             let cartItem = document.querySelector('.cart--item').cloneNode(true);
+            let nameSize = `${pizza.name} (${cart[i].size})`;
 
             cartItem.querySelector('.cart--item img').src = pizza.img;
+            cartItem.querySelector('.cart--item-nome').innerHTML = nameSize;
+            cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+            cartItem.querySelector('.cart--item-qtmenos').addEventListener('click', ()=>{
+                if(cart[i].qt > 1) {
+                    cart[i].qt--;
+                    updateCart();
+                } else {
+                    cart.splice(i,1);
+                    updateCart();
+                }
+            });
+            cartItem.querySelector('.cart--item-qtmais').addEventListener('click', ()=>{
+                cart[i].qt++;
+                updateCart();
+            });
 
             document.querySelector('.cart').append(cartItem);
         }
         
+        desconto = subtotal  * 0.1;
+        total = subtotal - desconto;
 
+
+        document.querySelector('.subtotal span:last-Child').innerHTML = `R$ ${subtotal.toFixed(2)}`;
         
 
     } else {
