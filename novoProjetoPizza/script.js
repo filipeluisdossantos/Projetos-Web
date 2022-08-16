@@ -111,6 +111,7 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 
 //Atualizar carrinho
 function updateCart(){
+    document.querySelector('.menu-openner span').innerHTML = cart.length;
     if(cart.length > 0) {
         document.querySelector('aside').classList.add('show');
         document.querySelector('.cart').innerHTML = '';
@@ -150,9 +151,23 @@ function updateCart(){
 
 
         document.querySelector('.subtotal span:last-Child').innerHTML = `R$ ${subtotal.toFixed(2)}`;
+        document.querySelector('.desconto span:last-Child').innerHTML = `RS ${desconto.toFixed(2)}`;
+        document.querySelector('.total span:last-Child').innerHTML = `R$ ${total.toFixed(2)}`;
         
 
     } else {
         document.querySelector('aside').classList.remove('show');
+        document.querySelector('aside').style.left = '100vw';
     }
 }
+
+//Evento mobile
+document.querySelector('.menu-openner').addEventListener('click',()=>{
+    if(cart.length > 0){
+        document.querySelector('aside').style.left = '0';
+    }
+});
+
+document.querySelector('.menu-closer').addEventListener('click',()=>{
+    document.querySelector('aside').style.left = '100vw';
+});
