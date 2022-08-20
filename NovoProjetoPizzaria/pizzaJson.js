@@ -2,7 +2,7 @@
 // exemplo do retorno de uma API, lista já convertida em objeto literal JavaScript.
 
 let pizzaJson = [
-    {id:1, name:'Mussarela', img:'images/pizza.png', price:[54.90, 62.90, 75.90], sizes:['(30cm)', '(35cm)', '(40cm)'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
+    {id:1, name:'Mussarela', img:'images/pizza1.png', price:[54.90, 62.90, 75.90], sizes:['(30cm)', '(35cm)', '(40cm)'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
     {id:2, name:'Calabresa', img:'images/pizza2.png', price:[52.90, 60.90, 73.90], sizes:['(30cm)', '(35cm)', '(40cm)'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
     {id:3, name:'Quatro Queijos', img:'images/pizza3.png', price:[53.90, 61.90, 74.90], sizes:['(30cm)', '(35cm)', '(40cm)'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
     {id:4, name:'Americana', img:'images/pizza4.png', price:[51.90, 59.90, 72.90], sizes:['(30cm)', '(35cm)', '(40cm)'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
