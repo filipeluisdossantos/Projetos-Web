@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -10,8 +11,53 @@ header {
 }
 
 .container {
-    width: 1140px;
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
     height: 100px;
     margin: auto;
-    background-color: red;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.logoImg {
+    width: 50px;
+    height: 50px;
+    background-color: #b28756;
+}
+
+.menu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #fff;
+    border-bottom: 5px solid black;
+}
+
+.menu ul li a:hover {
+    border-bottom: 5px solid #b28756;
+}
+
+.menu .active a {
+    border-bottom: 5px solid #b28756;
 }
