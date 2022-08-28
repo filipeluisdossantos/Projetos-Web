@@ -5,6 +5,10 @@
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     height: 100px;
     background-color: #000;
@@ -143,3 +147,42 @@ header {
 .banner .pointer.active {
     background-color: #b28756;
 }
+
+.default {
+    padding: 50px 0;
+}
+
+.default h2,
+.default p {
+    text-align: center;
+}
+
+.default h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.default p {
+    color: #ccc;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.default-body {
+    max-width: 1140px;
+    margin: auto;
+    background-color: #ccc;
+    min-height: 100px;
+}
+
+.default.light {
+    background-color: #fff;
+    color: #000;
+}
+
+.default.dark {
+    background-color: #000;
+    color: #fff;
+}
+
