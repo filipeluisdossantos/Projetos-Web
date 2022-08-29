@@ -97,30 +97,30 @@ header {
 }
 
 .banner .conteudoSlide1 h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .banner .conteudoSlide1 h2 {
     margin: 10px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .banner .conteudoSlide1 span {
     color:#b28756;
 }
 
-.banner .conteudoSlide1 a {
+.button {
     text-decoration: none;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #fff;
     background-color: #b28756;
-    padding: 7px 20px;
+    padding: 10px 20px;
     border-radius: 15px;
     margin-top: 15px;
 }
 
-.banner .conteudoSlide1 a:hover {
+.button:hover {
     background-color: #7a552a;
 }
 
@@ -159,11 +159,11 @@ header {
 
 .default h2 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.default p {
-    color: #ccc;
+.default > p {
+    color: #888;
     font-size: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -172,8 +172,6 @@ header {
 .default-body {
     max-width: 1140px;
     margin: auto;
-    background-color: #ccc;
-    min-height: 100px;
 }
 
 .default.light {
@@ -186,3 +184,52 @@ header {
     color: #fff;
 }
 
+
+/*Areas específicas*/
+
+.aboutus-area {
+    display: flex;
+}
+.aboutus-left {
+    flex: 1;
+}
+.aboutus-left p {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 600px;
+    text-align: justify;
+}
+.aboutus-right {
+    width: 470px;
+}
+.aboutus-right img {
+    width: 100%;
+}
+
+
+.services-area {
+    display: flex;
+}
+.service {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #888;
+}
+.service:first-child {
+    border-left: 1px solid #888;
+}
+.service img {
+    width: 40px;
+}
+.service h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.service p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    line-height: 20px;
+}
