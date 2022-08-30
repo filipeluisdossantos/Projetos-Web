@@ -152,9 +152,10 @@ header {
     padding: 50px 0;
 }
 
-.default h2,
-.default p {
+.default > h2,
+.default > p {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .default h2 {
@@ -233,3 +234,45 @@ header {
     margin-top: 5px;
     line-height: 20px;
 }
+
+
+
+
+.projects-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-area .menu-option {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 22px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.projects-area .menu-option ul {
+    list-style: none;
+}
+
+.projects-area .menu-option ul li {
+    text-transform: uppercase;
+    color: #888;
+    padding: 15px;
+    border-left: 1px solid #ddd;
+    border-bottom: 3px solid #eee;
+    display: inline-block;
+}
+
+.projects-area .menu-option ul li:hover,
+.projects-area .menu-option ul li.active
+{
+    border-bottom: 3px solid #b28756;
+}
+
+.projects-area .menu-option ul li:first-child {
+    border-left: none;
+}
+
