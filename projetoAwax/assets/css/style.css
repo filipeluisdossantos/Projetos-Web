@@ -322,3 +322,87 @@ header {
     font-size: 12px;
     max-width: 230px;
 }
+
+
+
+.team-opacity {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.team-bg {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.default .team-opacity > h2,
+.default .team-opacity > p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.default .team-opacity > h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.default .team-opacity > p {
+    color: #888;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.team-area {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.team-area .slideArea {
+    width: 1200vw;
+    height: 100%;
+}
+
+.team-area .slide {
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.team-area .conteudoSlide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.team-area .pointerArea {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-area .pointer {
+    width: 13px;
+    height: 13px;
+    border: 2px solid #b28756;
+    border-radius: 7px;
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.team-area .pointer.active {
+    background-color: #b28756;
+}
