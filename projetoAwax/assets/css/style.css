@@ -406,3 +406,42 @@ header {
 .team-area .pointer.active {
     background-color: #b28756;
 }
+
+.conteudoSlide {
+    padding: 30px;
+}
+
+.conteudoSlide > img {
+    width: 150px;
+    height: auto;
+}
+
+.conteudoSlide h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.conteudoSlide p {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.conteudoSlide .social-media {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.social-media a:hover {
+    background-color: #b28756;
+}
