@@ -449,3 +449,61 @@ header {
 .social-media a:hover {
     background-color: #b28756;
 }
+
+
+
+.clients-area {
+    max-width: 650px;
+    margin: auto;
+    overflow: hidden;
+}
+.clients-area .slideArea {
+    display: flex;
+    width: 310vw;
+    height: auto;
+}
+.clients-area .slide {
+    width: 100vw;
+    height: 100%;
+}
+.clients-area .conteudoSlide {
+    max-width: 650px;
+    text-align: center;
+    padding: 0;
+}
+.clients-area .conteudoSlide h4 {
+    font-weight: 700;
+}
+.clients-area .conteudoSlide img:first-child {
+    width: 120px;
+}
+.clients-area .conteudoSlide img:nth-child(4) {
+    width: 20px;
+    margin-top: 20px;
+}
+.clients-area .client-comments p  {
+    margin-top: 10px;
+    line-height: 20px;
+    color: #999;
+}
+.clients-area .pointerArea {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-area .pointer {
+    width: 13px;
+    height: 13px;
+    border: 2px solid #b28756;
+    border-radius: 7px;
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.clients-area .pointer.active {
+    background-color: #b28756;
+}
