@@ -177,7 +177,7 @@ header {
 }
 
 .default.light {
-    background-color: #fff;
+    background-color: #eee;
     color: #000;
 }
 
@@ -506,4 +506,21 @@ header {
 
 .clients-area .pointer.active {
     background-color: #b28756;
+}
+
+
+.marcas {
+    width: 100vw;
+    background-color: #fff;
+}
+.clients-marcas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+    margin: auto;
+}
+.clients-marcas img {
+    padding: 40px;
 }
