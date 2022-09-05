@@ -524,3 +524,56 @@ header {
 .clients-marcas img {
     padding: 40px;
 }
+
+
+
+.price-area {
+    display: flex;
+    width: inherit;
+    height: 340px;
+    padding: 0 20px;
+}
+.price-area .prices {
+    background-color: #fff;
+    flex: 1;
+    margin-right: 25px;
+    text-align: center;
+    padding: 30px 40px;
+}
+.price-area .prices:last-child {
+    margin-right: 0;
+}
+.price-area .prices h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+.price-area .prices p {
+    font-size: 12px;
+}
+.price-area .prices p:nth-child(2) {
+    margin-top: 10px;
+    font-size: 27px;
+}
+.price-area .prices p:nth-child(3) {
+    color: #777;
+    margin-bottom: 15px;
+}
+.price-area .prices .barra {
+    width: 10px;
+    height: 1px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #999;
+}
+.price-area .button {
+    display: inline-block;
+    background-color: #333;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.price-area .button.active,
+.price-area .button:hover {
+   background-color: #b28756;
+}
