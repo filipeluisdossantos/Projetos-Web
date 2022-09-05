@@ -626,4 +626,18 @@ header {
 }
 .premium-area .option-item img {
     width: 25px;
+    margin-right: 15px;
+}
+.premium-area .option-item span {
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+}
+.premium-area .option-item p {
+    margin-left: 44px;
+    margin-top: 8px;
+}
+.premium-area .option-item ul {
+    margin-left: 61px;
+    margin-top: 10px;
 }
