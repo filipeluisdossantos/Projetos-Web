@@ -577,3 +577,53 @@ header {
 .price-area .button:hover {
    background-color: #b28756;
 }
+
+
+
+.default.light.white {
+    background-color: #fff;
+}
+.premium-area {
+    overflow: hidden;
+    width: inherit;
+    height:auto;
+}
+.premium-area .slide-area {
+    width: 310vw;
+    height: auto;
+}
+.premium-area .slide {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.premium-area .div-left {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.premium-area .div-left img {
+    width: 300px;
+}
+.premium-area .div-right {
+    width: 840px;
+    height: 300px;
+    background-color: rgb(204, 236, 19);
+}
+.premium-area .options {
+    display: flex;
+    flex-direction: column;
+}
+.premium-area .option-item {
+    width: 500px;
+    padding: 20px 0 5px 10px;
+    background-color: red;
+}
+.premium-area .option-item img {
+    width: 25px;
+}
