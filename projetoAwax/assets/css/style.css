@@ -589,6 +589,7 @@ header {
     height:auto;
 }
 .premium-area .slide-area {
+    display: flex;
     width: 310vw;
     height: auto;
 }
@@ -597,7 +598,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }
 .premium-area .div-left {
     flex: 1;
@@ -613,7 +613,6 @@ header {
 .premium-area .div-right {
     width: 840px;
     height: 300px;
-    background-color: rgb(204, 236, 19);
 }
 .premium-area .options {
     display: flex;
@@ -621,8 +620,7 @@ header {
 }
 .premium-area .option-item {
     width: 500px;
-    padding: 20px 0 5px 10px;
-    background-color: red;
+    padding: 25px 0 5px 10px;
 }
 .premium-area .option-item img {
     width: 25px;
@@ -635,9 +633,43 @@ header {
 }
 .premium-area .option-item p {
     margin-left: 44px;
-    margin-top: 8px;
+    font-size: 14px;
+    color: #777;
 }
 .premium-area .option-item ul {
     margin-left: 61px;
     margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #777;
 }
+.premium-area .pointerArea {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.premium-area .pointer {
+    width: 13px;
+    height: 13px;
+    border: 2px solid #b28756;
+    border-radius: 7px;
+    margin-right: 3px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.premium-area .pointer.active {
+    background-color: #b28756;
+}
+.premium-area button {
+    width: 100%;
+    max-width: 1140px;
+    border: 0;
+    background-color: #fff;
+}
+.premium-area .button {
+    display: inline-block;
+    text-transform: uppercase;
+}
+   
