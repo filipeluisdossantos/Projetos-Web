@@ -672,4 +672,50 @@ header {
     display: inline-block;
     text-transform: uppercase;
 }
-   
+
+
+
+.facts-area {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.facts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.facts p:first-child {
+    font-size: 35px;
+    font-weight: 700;
+    color: #b28756;
+}
+.facts .barra {
+    width: 15px;
+    height: 3px;
+    background-color: #999;
+    margin-top: 10px;
+}
+.facts .desc-facts {
+    width: 180px;
+    height: 120px;
+}
+.facts h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.facts .desc-facts p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 30px;
+    line-height: 20px;
+}
+.facts:first-child p:last-child{
+    margin-top: 10px;
+}
