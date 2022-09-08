@@ -627,9 +627,11 @@ header {
     margin-right: 15px;
 }
 .premium-area .option-item span {
+    display: block;
+    margin-top: -25px;
+    margin-left: 44px;
     text-transform: uppercase;
     font-weight: 700;
-    position: absolute;
 }
 .premium-area .option-item p {
     margin-left: 44px;
@@ -718,4 +720,68 @@ header {
 }
 .facts:first-child p:last-child{
     margin-top: 10px;
+}
+
+
+
+
+
+.rede-social{
+    width: 100vw;
+    background-color: #fff;
+}
+.area-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+    margin: auto;
+}
+.area-social img {
+    width: 70px;
+    height: auto;
+    padding: 30px 10px 30px 40px;
+}
+.area-social span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+
+.contact-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 450px;
+    height: 350px;
+}
+.contact-area form {
+    width: inherit;
+    height: 260px;
+}
+.contact-area .w50 {
+    width: 47.7%;
+    height: 40px;   
+    border: 0;
+    border-bottom: 2px solid #999;
+}
+.contact-area form .w50:first-child {
+    margin-right: 8px;
+}
+.contact-area form .w50:nth-child(2){
+    margin-left: 8px;
+}   
+.contact-area .w100 {
+    width: 99.9%;
+    height: 60px;
+    border: 0;
+    border-bottom: 2px solid #999;
+}
+.contact-area .messagem {
+    height:110px;
 }
