@@ -758,17 +758,19 @@ header {
     justify-content: center;
     margin: auto;
     width: 450px;
-    height: 350px;
+    height: 310px;
 }
 .contact-area form {
     width: inherit;
-    height: 260px;
+    height: 230px;
 }
 .contact-area .w50 {
     width: 47.7%;
-    height: 40px;   
+    height: 30px;   
     border: 0;
     border-bottom: 2px solid #999;
+    background-color: #eee;
+    outline: 0;
 }
 .contact-area form .w50:first-child {
     margin-right: 8px;
@@ -778,10 +780,20 @@ header {
 }   
 .contact-area .w100 {
     width: 99.9%;
-    height: 60px;
+    height: 30px;
     border: 0;
     border-bottom: 2px solid #999;
+    background-color: #eee;
+    margin-top: 30px;
+    outline: 0;
 }
 .contact-area .messagem {
-    height:110px;
+    height:80px;
+}
+.contact-area input::placeholder{
+    font-weight: 600;
+    color: #999;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
 }
