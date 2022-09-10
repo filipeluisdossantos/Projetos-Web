@@ -17,7 +17,7 @@ header {
 .container {
     display: flex;
     align-items: center;
-    max-width: 1140px;
+    max-width: 1080px;
     height: 100px;
     margin: auto;
 }
@@ -111,6 +111,7 @@ header {
 
 .button {
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
     color: #fff;
@@ -172,7 +173,7 @@ header {
 }
 
 .default-body {
-    max-width: 1140px;
+    max-width: 1080px;
     margin: auto;
 }
 
@@ -199,11 +200,11 @@ header {
 .aboutus-left p {
     font-size: 16px;
     line-height: 25px;
-    max-width: 600px;
+    max-width: 580px;
     text-align: justify;
 }
 .aboutus-right {
-    width: 470px;
+    width: 450px;
 }
 .aboutus-right img {
     width: 100%;
@@ -281,17 +282,17 @@ header {
 .projects-area .photo-area {
     margin-top: 20px;
     width: 100vw;
-    max-width: 1140px;
+    max-width: 1080px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .photo-area-single {
-    width: 280px;
+    width: 260px;
 }
 .photo-area-single .photo {
-    width: 260px;
-    height: 160px;
+    width: 240px;
+    height: 140px;
     margin: 10px;
 }
 .photo-area-single .photo:hover .photo-info {
@@ -518,7 +519,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1140px;
+    max-width: 1080px;
     margin: auto;
 }
 .clients-marcas img {
@@ -735,7 +736,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1140px;
+    max-width: 1080px;
     margin: auto;
 }
 .area-social img {
@@ -796,4 +797,45 @@ header {
     position: absolute;
     left: 0;
     bottom: 8px;
+}
+
+
+
+.endereco-mapa {
+    background-image: url(../images/mapa.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 35px 0;
+}
+.endereco-mapa .conteudo-area {
+    width: 100vw;
+    max-width: 1080px;
+    margin: auto;
+}
+.endereco-mapa .conteudo {
+    width: 50%;
+    padding: 50px 35px;
+    background-color: #fff;
+}
+.conteudo-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.conteudo-info span {
+    color: #999;
+    font-weight: 600;
+    font-size: 12px;
+}
+.conteudo-info-img {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 15px;
+    background-color: #999;
+    margin-right: 15px;
+}
+.conteudo-info-img img {
+    width: 18px;
+    height: auto;
 }
