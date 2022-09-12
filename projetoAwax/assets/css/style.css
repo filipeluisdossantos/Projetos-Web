@@ -288,11 +288,11 @@ header {
     justify-content: center;
 }
 .photo-area-single {
-    width: 260px;
+    width: 270px;
 }
 .photo-area-single .photo {
-    width: 240px;
-    height: 140px;
+    width: 250px;
+    height: 150px;
     margin: 10px;
 }
 .photo-area-single .photo:hover .photo-info {
@@ -368,7 +368,7 @@ header {
 }
 
 .team-area .slideArea {
-    width: 1200vw;
+    width: 2700px;
     height: 100%;
 }
 
@@ -838,4 +838,70 @@ header {
 .conteudo-info-img img {
     width: 18px;
     height: auto;
+}
+
+
+footer {
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0;
+}
+.footer-area {
+    color: #888;
+    width: 100vw;
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+}
+.footer-area-conteudo {
+    flex: 1;
+    margin-right: 30px;
+    height: 160px;
+    padding:15px 0;
+}
+.footer-area-conteudo:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 260px;
+    height: 150px;
+    margin: 15px;
+    padding-bottom: 0;
+}
+.footer-area-conteudo:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-right: 0px;
+    justify-content:space-between;
+}
+.footer-area-conteudo input {
+    background-color: #333;
+    border: 0;
+    border-bottom: 2px solid #999;
+    padding-bottom: 10px;
+}
+.footer-area input::placeholder {
+    text-transform: uppercase;
+    color: #999;
+    text-align: center;
+}
+.footer-area-conteudo .social-media {
+    display: flex;
+    justify-content: center;
+}
+.footer-area-conteudo .social-media a {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    padding: 11px;
+    background-color: #888;
+    border-radius: 13px;
+}
+.footer-area-conteudo .social-media img {
+    width: 14px;
+    height: 14px;
 }
