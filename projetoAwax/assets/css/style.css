@@ -35,11 +35,15 @@ header {
     border-radius: 25px;
     background-color: #b28756;
 }
+.menu-mobile {
+    display: none;
+}
 
 .menu {
     display: flex;
     flex: 1;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-left: -100px;
     align-items: center;
 }
 
@@ -530,6 +534,7 @@ header {
 
 .price-area {
     display: flex;
+    flex-wrap: wrap;
     width: inherit;
     height: 340px;
     padding: 0 20px;
@@ -597,11 +602,11 @@ header {
 .premium-area .slide {
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .premium-area .div-left {
-    flex: 1;
+    width: 500px;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -612,7 +617,7 @@ header {
     width: 300px;
 }
 .premium-area .div-right {
-    width: 840px;
+    width: 500px;
     height: 300px;
 }
 .premium-area .options {
@@ -883,6 +888,8 @@ footer {
     border: 0;
     border-bottom: 2px solid #999;
     padding-bottom: 10px;
+    outline: 0;
+    color: #999;
 }
 .footer-area input::placeholder {
     text-transform: uppercase;
@@ -904,4 +911,99 @@ footer {
 .footer-area-conteudo .social-media img {
     width: 14px;
     height: 14px;
+}
+
+
+
+@media (max-width: 900px) {
+    .logoArea {
+        margin-left: 50px;
+    }
+    .logoImg {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 60%;
+        height: calc(100vh - 100px);
+        background-color: rgba(0,0,0,0.9);
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .menu ul li a {
+        border: 0;
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 55px;
+        text-transform: uppercase;
+    }
+    .menu {
+        justify-content: flex-end;
+        margin-right: 70px;
+    }
+    .menu-mobile {
+        display: block;
+        width: 40px;
+        height: auto;
+    }
+    .menu .active a {
+        border: none;
+        color: #b28756;
+    }
+    .aboutus-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutus-left {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .aboutus-left p {
+        width: auto;
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .aboutus-left a {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    .aboutus-right {
+       display: flex;
+       justify-content: center;
+    }
+    .services-area {
+        flex-wrap: wrap;
+    }
+    .service {
+        min-width: 300px;
+        padding: 27px;
+    }
+    .team-area {
+        max-width: 580px;
+    }
+    .price-area {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .price-area .prices {
+        flex: none;
+        min-width: 300px;
+        margin-right: 0;
+        margin: 0;
+        margin: 25px;
+    }
+    
+    .price-area .prices:last-child {
+        margin: 25px;
+    }
 }
