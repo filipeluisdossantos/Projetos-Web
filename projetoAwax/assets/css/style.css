@@ -955,7 +955,8 @@ footer {
     .menu .active a {
         border: none;
         color: #b28756;
-    }
+    }     
+
     .aboutus-area {
         flex-direction: column;
         align-items: center;
@@ -979,6 +980,9 @@ footer {
        display: flex;
        justify-content: center;
     }
+
+
+
     .services-area {
         flex-wrap: wrap;
     }
@@ -986,14 +990,20 @@ footer {
         min-width: 300px;
         padding: 27px;
     }
+    .service:first-child {
+        border-left: none;
+    }
     .team-area {
         max-width: 580px;
     }
+
+
+
+
     .price-area {
         height: auto;
         justify-content: center;
         align-items: center;
-
     }
     .price-area .prices {
         flex: none;
@@ -1002,8 +1012,65 @@ footer {
         margin: 0;
         margin: 25px;
     }
-    
     .price-area .prices:last-child {
         margin: 25px;
     }
+    .premium-area .slide {
+        flex-direction: column;
+    }
+   .facts-area .facts {
+     min-width: 300px;
+   }
+
+
+
+   .endereco-mapa .conteudo {
+    margin-left: 20px;
+   }
+
+
+   .footer-area {
+    flex-wrap: wrap;
+    }
+    .footer-area-conteudo {
+        min-width: 300px;
+        margin-right: 0;
+        margin: 50px;
+    }
+    .footer-area-conteudo:last-child {
+        max-width: 500px;
+        margin: auto;
+   }
+}
+
+
+@media (max-width: 768px) {
+    .footer-area-conteudo:last-child {
+        max-width: 300px;
+   }
+}
+
+@media (max-width: 450px) {
+    .banner .conteudoSlide1 h1 {
+        font-size: 31px;
+    }
+    .banner .conteudoSlide1 h2 {
+        font-size: 15px;
+    }
+    .button {
+        font-size: 12px;
+    }
+    .aboutus-left p {
+        font-size: 20px;
+        line-height: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .service {
+        min-width: none;
+        max-width: 100px;
+        margin: auto;
+        border: none;
+    }
+    
 }
