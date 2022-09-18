@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #000;
+    height: 100px;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+    background-color: red;
+    height: 100px;
+}
