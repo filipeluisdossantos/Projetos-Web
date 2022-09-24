@@ -186,10 +186,46 @@ header {
 .aboutus-left {
     flex: 1;
 }
+.aboutus-left p {
+    font-size: 14px;
+    line-height: 25px;
+}
 .aboutus-right {
     width: 500px;
     text-align: center;
 }
 .aboutus-right img {
     width: 420px;
+    box-shadow: 0px 5px 10px #333;
 }
+
+
+.section-services {
+    display: flex;
+}
+.section-services .service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #999;
+    padding: 10px;
+}
+.service .service-container {
+    max-width: 140px;
+    margin: auto;
+}
+.section-services .service:first-child {
+    border-left: 1px solid #888;
+}
+.service img {
+    width: 45px;
+}
+.service h4 {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.service p {
+    color: #888;
+    font-size: 13px;
+    line-height: 18 px;
+}
+
