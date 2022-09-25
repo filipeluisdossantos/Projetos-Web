@@ -214,7 +214,7 @@ header {
     margin: auto;
 }
 .section-services .service:first-child {
-    border-left: 1px solid #888;
+    border-left: 1px solid #999;
 }
 .service img {
     width: 45px;
@@ -229,3 +229,34 @@ header {
     line-height: 18 px;
 }
 
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-projects-filters {
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+.section-projects-filters ul {
+    list-style: none;
+}
+.section-projects-filters ul li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-left: 1px solid #ccc;
+    border-bottom: 3px solid #ddd;
+}
+.section-projects-filters ul li:first-child {
+    border-left: 0;
+}
+.section-projects-filters ul li:hover,
+.section-projects-filters li.active {
+    border-bottom: 3px solid #b28756;
+}
