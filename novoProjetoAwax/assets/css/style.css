@@ -260,3 +260,52 @@ header {
 .section-projects-filters li.active {
     border-bottom: 3px solid #b28756;
 }
+
+
+
+
+.section-projects-photos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.section-projects-photo {
+    width: 280px;
+}
+.section-projects-photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section-projects-photoarea img {
+    width: inherit;
+    height: inherit;
+}
+.section-projects-photoinfo {
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-projects-photoinfo h5 {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.section-projects-photoinfo p {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 18px;
+    width: 180px;
+}
+.section-projects-photoarea:hover .section-projects-photoinfo {
+    display: flex;
+}
