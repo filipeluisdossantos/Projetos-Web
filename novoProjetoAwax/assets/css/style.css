@@ -309,3 +309,15 @@ header {
 .section-projects-photoarea:hover .section-projects-photoinfo {
     display: flex;
 }
+
+
+.bg-team {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position:center;
+    padding: 0;
+}
+.section-team-opacity {
+    background-color: rgba(0,0,0,0.8);
+    padding: 50px 0;
+}
