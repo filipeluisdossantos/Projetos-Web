@@ -319,5 +319,67 @@ header {
 }
 .section-team-opacity {
     background-color: rgba(0,0,0,0.8);
-    padding: 50px 0;
+    padding: 50px 0 40px 0;
+}
+
+
+.section-team {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.section-team .slide-area {
+    width: 1200px;
+}
+.section-team .slide {
+    display: inline-block;
+    width: 280px;
+    margin-right: 20px;
+    height: 310px;
+    background-color: #fff
+}
+.section-team .slide-conteudo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+.section-team-opacity .pointer-area {
+    position:relative;
+    margin-top: 50px;
+    width: 100%;
+}
+.section-team .slide-conteudo > img {
+    width: 130px;
+    height: auto;
+}
+.section-team .slide-conteudo h4 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.section-team .slide-conteudo p {
+    font-size: 11px;
+}
+.section-team .section-team-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.section-team .section-team-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 13px;
+    margin-right: 5px;
+}
+.section-team .section-team-social a:hover {
+    background-color: #b28756;
 }
