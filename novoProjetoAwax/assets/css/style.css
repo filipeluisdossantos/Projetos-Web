@@ -498,3 +498,74 @@ header {
 .price-planos a.active {
     background-color: #b28756;
 }
+
+
+.default.light.white {
+    background-color: #fff;
+}
+.default.light.white .default-body {
+    width: 100vw;
+}
+.section-premium-slidearea {
+    width: 310vw;
+    height: 100%;
+    display: flex;
+}
+.section-premium-slide {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 1040px;
+    height: 100%;
+}
+.premium-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.premium-right {
+    width: 55%;
+}
+.premium-left-img {
+    width: 280px;
+    height: 280px;
+}
+.premium-left-img img {
+    width: 100%;
+    height: 100%;
+}
+.premium-right-conteudos {
+    display: flex;
+}
+.premium-right-conteudos img {
+    width: 20px;
+    height: 18px;
+    margin-right: 15px;
+    margin-top: 28px;
+}
+.premium-right .right-conteudo {
+    margin-top: 27px;
+}
+.premium-right .right-conteudo h4 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.premium-right .right-conteudo p {
+    font-size: 13px;
+    color: #888;
+}
+.premium-right .right-conteudo ul {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.premium-right .right-conteudo ul li {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.default.light.white .pointer-area {
+    margin-top: 40px;
+}
+.default.light.white .button {
+    margin-top: 90px;
+}
