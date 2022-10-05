@@ -14,8 +14,9 @@ header {
 }
 .container {
     display: flex;
+    width: 100vw;
     max-width: 1040px;
-    height: 100px;
+    height: auto;
     margin: auto;
 }
 .logo-area {
@@ -144,7 +145,6 @@ header {
     padding: 50px 0;
 }
 .default .container {
-    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -505,6 +505,7 @@ header {
 }
 .default.light.white .default-body {
     width: 100vw;
+    overflow: hidden;
 }
 .section-premium-slidearea {
     width: 310vw;
@@ -642,4 +643,82 @@ header {
     text-transform: uppercase;
     font-size: 11px;
     color: #888;
+}
+
+
+.section-contactus form {
+    margin-top: 5px;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+}
+.section-contactus form input {
+    padding: 5px 0;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 20px;
+    background-color: #eee;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    outline: 0;
+}
+.section-contactus .w50 {
+    width: 49%;
+}
+.section-contactus .w100 {
+    width: 99%;
+}
+.section-contactus form textarea {
+    text-transform: uppercase;
+    color: #888;
+    width: 99%;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+    resize: none;
+    outline: 0;
+}
+.section-contactus form textarea::placeholder {
+    position: absolute;
+    bottom: 5px;
+}
+
+
+.section-map {
+    width: 100vw;
+    height: auto;
+    background-image: url(../images/mapa.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+}
+.section-map .map-info {
+    width: 48%;
+    height: 100%;
+    background-color: #fff;
+    padding: 24px 25px;
+}
+.map-info-item {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    margin: 6px 0;
+}
+.map-info-item p {
+    color: #888;
+    font-size: 13px;
+}
+.map-info-item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 14px;
+    margin-right: 10px;
+    background-color: #bbb;
+}
+.map-info-item-img img {
+    width: 17px;
+    height: auto;    
 }
