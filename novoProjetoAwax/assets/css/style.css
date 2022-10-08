@@ -849,4 +849,90 @@ footer {
     .banner {
        height: calc(100vh - 140px);
     }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+    .aboutus-left {
+        text-align: center;
+    }
+    .aboutus-left p {
+        padding: 0 40px;
+        text-align: justify;
+    }
+    .aboutus-left .button {
+        margin-bottom: 50px;
+    }
+    .aboutus-right {
+        width: auto;
+    }
+    .section-services {
+        flex-wrap:  wrap;
+    }
+    .section-services .service {
+        min-width: 50%;
+        margin-bottom: 20px;
+    }
+    .section-services .service:last-child {
+        margin-bottom: 0;
+    }
+    .section-projects-photo {
+        width: 300px;
+    }
+    .section-projects-photoarea {
+        width: 280px;
+        height: 180px;
+    }
+    .section-team {
+        max-width: 580px;
+    }
+    .default.marcas .container {
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+    .default.marcas .container img {
+        margin: 30px 50px;
+        min-width: 100px;
+    }
+    .section-price {
+        justify-content: center;
+    }
+    .price-planos {
+        min-width: 280px;
+    }
+    .price-planos:last-child {
+        margin-right:20px;
+    }
+    .section-premium-slide {
+        max-width: 600px;
+    }
+    .section-facts {
+        flex-wrap: wrap;
+    }
+    .section-facts .facts {
+        min-width: 50%;
+    }
+    .section-map .map-info {
+        margin-left: 30px;
+    }
+    footer .container {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 50px;
+    }
+    .footer-conteudo-area {
+        min-width: 90%;
+        max-width: 90%;
+    }
+    .footer-conteudo-area:first-child {
+        align-items: center;
+    }
+    .footer-conteudo-area:first-child h5 {
+        margin: 15px 0;
+    }
+    .footer-conteudo-area:last-child {
+        margin: auto;
+        margin-top: 30px;
+    }
 }
