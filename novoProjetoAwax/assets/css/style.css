@@ -801,7 +801,7 @@ footer {
 
 
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     header {
         height: 140px;
         display: flex;
@@ -857,7 +857,7 @@ footer {
         text-align: center;
     }
     .aboutus-left p {
-        padding: 0 40px;
+        padding: 0 50px;
         text-align: justify;
     }
     .aboutus-left .button {
@@ -936,3 +936,127 @@ footer {
         margin-top: 30px;
     }
 }
+
+@media (max-width: 450px) {
+    .logo-area {
+        margin-left: 10px;
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+    }
+    .menu-mobile {
+        width: 40px;
+        margin-right: 20px;
+    }
+    nav {
+        width: 80vw;
+        display: none;
+    }
+    .menu ul li a {
+        height: 65px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 30px;
+        border-bottom: 0;
+    }
+    .banner .slide-conteudo h1 {
+        font-size: 26px;
+    }
+    .banner .slide-conteudo h2 {
+        font-size: 15px;
+        margin-top: 10px;   
+    }
+    .default .container h2 {
+        font-size: 20px;
+    }
+    .aboutus-left p {
+        padding: 0 20px;
+    }
+    .aboutus-right {
+        padding: 0 20px;
+    }
+    .aboutus-right img {
+        width: 100%;
+    }
+    .section-services .service {
+        min-width: 100%;
+    }
+    .service p {
+        width: 50%;
+        margin: auto;
+    }
+    .service .service-container {
+        max-width: 147px;
+    }
+    .section-projects-filters {
+        margin: 0 20px;
+        padding: 0 30px;
+    }
+    .section-projects-filters ul li:nth-child(4) {
+        border-left: 0;
+    }
+    .section-projects-photo {
+        width: 320px;
+    }
+    .section-projects-photoarea {
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 14px;
+    }
+    .section-team {
+        max-width: 280px;
+    }
+    .clients-conteudo {
+        width: 300px;
+    }
+    .default.marcas .container img {
+        margin: 30px 9px;
+    }
+    .price-planos {
+        min-width: 300px;
+        max-width: auto;
+        height: auto;
+        margin-right: 0px;
+        padding: 30px 0;
+    }
+    .price-planos:last-child {
+        margin-right: 0;
+    }
+    .section-premium-slide {
+        flex-direction: column;
+    }
+    .premium-left {
+        width: 70%;
+        margin: auto;
+    }
+    .premium-left-img {
+        height: auto;
+    }
+    .premium-right {
+        width: 70%;
+        margin: auto;
+    }
+    .section-facts .facts {
+        min-width: 100%;
+        padding-top: 0;
+    }
+    .facts .facts-container {
+        max-width: 200px;
+    }
+    .default.rede-social .container {
+        padding: 0 20px;
+    }
+    .default.rede-social .icone-face img {
+        width: auto;
+    }
+    .default.rede-social .container p {
+        margin-right: 0;    
+    }
+    .section-contactus form {
+        width: 80%;
+    }
+}
+
