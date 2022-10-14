@@ -109,5 +109,33 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 });
 
 function updateCart() {
-    
+    if(cart.length > 0) {
+        document.querySelector('aside').classList.add('show');
+        document.querySelector('.cart').innerHTML = '';
+        for(let i in cart) {
+            let modelPizza = document.querySelector('.cart--item').cloneNode(true);
+            let cartPizza = pizzaJson.find((item)=> item.id == cart[i].id);
+            let nameSize = `${cartPizza.name} (${cart[i].size})`; 
+
+            modelPizza.querySelector('img').src = cartPizza.img;
+            modelPizza.querySelector('.cart--item-nome').innerHTML = nameSize;
+            modelPizza.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+            modelPizza.querySelector('.cart--item-qtmenos').addEventListener('click', ()=>{
+                if(cart[i].qt > 1) {
+                    cart[i].qt--;
+                    updateCart();
+                }else{
+                    cart.splice(i,1);
+                    updateCart();
+                } 
+            });
+            modelPizza.querySelector('.cart--item-qtmais').addEventListener('click', ()=>{
+                cart[i].qt++;
+                updateCart();
+            });
+            document.querySelector('.cart').append(modelPizza);
+        }
+    }else {
+        document.querySelector('aside').classList.remove('show');
+    }
 }
