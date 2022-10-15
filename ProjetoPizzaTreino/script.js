@@ -109,10 +109,16 @@ document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
 });
 
 function updateCart() {
+    document.querySelector('.menu-openner span').innerHTML = cart.length;
     if(cart.length > 0) {
         document.querySelector('aside').classList.add('show');
         document.querySelector('.cart').innerHTML = '';
+        let subtotal = 0;
+        let desconto = 0;
+        let total = 0;
+
         for(let i in cart) {
+            subtotal += cart[i].qt * cart[i].price;
             let modelPizza = document.querySelector('.cart--item').cloneNode(true);
             let cartPizza = pizzaJson.find((item)=> item.id == cart[i].id);
             let nameSize = `${cartPizza.name} (${cart[i].size})`; 
@@ -135,7 +141,25 @@ function updateCart() {
             });
             document.querySelector('.cart').append(modelPizza);
         }
+        desconto = subtotal * 0.1;
+        total = subtotal - desconto;
+
+        document.querySelector('.subtotal span:last-Child').innerHTML = `R$ ${subtotal.toFixed(2)}`;
+        document.querySelector('.desconto span:last-Child').innerHTML = `R$ ${desconto.toFixed(2)}`;
+        document.querySelector('.total span:last-child').innerHTML = `R$ ${total.toFixed(2)}`;
     }else {
         document.querySelector('aside').classList.remove('show');
+        document.querySelector('aside').style.left = '100vw';
     }
 }
+
+// botão carrinho mobile
+
+document.querySelector('.menu-openner').addEventListener('click',()=>{
+    if(cart.length > 0){
+        document.querySelector('aside').style.left = '0';
+    }
+});
+document.querySelector('.menu-closer').addEventListener('click',()=>{
+    document.querySelector('aside').style.left = '100vw';
+});
