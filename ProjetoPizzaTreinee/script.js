@@ -1,6 +1,7 @@
 let pizzaIndex;
 let priceSelected;
 let modalQt;
+let cart = [];
 
 pizzaJson.map((item, index)=>{
     let pizzaItem = document.querySelector('.pizza-item').cloneNode(true);
@@ -39,3 +40,68 @@ pizzaJson.map((item, index)=>{
 
 //Eventos do modal
 
+//Seleção de tamanho
+document.querySelectorAll('.pizzaInfo--size').forEach((sizeItem, sizeIndex)=>{
+    sizeItem.addEventListener('click',()=>{
+        document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
+        sizeItem.classList.add('selected');
+        priceSelected = pizzaJson[pizzaIndex].price[sizeIndex].toFixed(2);
+        document.querySelector('.pizzaInfo--actualPrice').innerHTML = `R$ ${priceSelected}`;
+    });
+});
+
+//Seleção de quantindade
+
+document.querySelector('.pizzaInfo--qtmenos').addEventListener('click',()=>{
+    if(modalQt > 1){
+        modalQt--;
+        document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+document.querySelector('.pizzaInfo--qtmais').addEventListener('click',()=>{
+    modalQt++;
+    document.querySelector('.pizzaInfo--qt').innerHTML = modalQt;
+});
+
+//Ativando botão cancelar
+
+document.querySelectorAll('.pizzaInfo--cancelMobileButton, .pizzaInfo--cancelButton').forEach((item)=>{
+    item.addEventListener('click', closeModal);
+});
+
+function closeModal(){
+    document.querySelector('.pizzaWindowArea').style.opacity = '0';
+    setTimeout(()=>{
+        document.querySelector('.pizzaWindowArea').style.display = 'none';
+    },500);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+//adicionar ao carrinho
+
+document.querySelector('.pizzaInfo--addButton').addEventListener('click',()=>{
+    let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
+    let key = pizzaJson[pizzaIndex].id + '*' + size;
+    let i = cart.findIndex((item)=>item.key == key);
+
+    if(i > -1) {
+        cart[i].qt +=modalQt;
+    } else {
+        cart.push({
+            key:key,
+            id:pizzaJson[pizzaIndex].id,
+            size:size,
+            price:priceSelected,
+            qt:modalQt
+        });
+    }
+    closeModal();
+    updateCart();
+});
+
+function updateCart() {
+    
+}
