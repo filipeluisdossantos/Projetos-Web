@@ -140,3 +140,8 @@ body {
 .d-2 p {
     margin: 0;
 }
+
+.aviso--grande {
+    font-size: 30px;
+    font-weight: bold;
+}
