@@ -55,6 +55,9 @@ function atualizaInterface() {
             }
         }
         lateral.innerHTML = fotosHtml;
+        if (numero == 13 && etapaAtual == 1) {
+            document.querySelector('.lula').style.display = 'block';
+        }
     } else {
         seuVotoPara.style.display = 'block';
         aviso.style.display = 'block';

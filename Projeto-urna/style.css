@@ -149,3 +149,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.lula {
+    text-align: center;
+    color: red;
+    display: none;
+}

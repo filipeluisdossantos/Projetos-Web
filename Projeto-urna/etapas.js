@@ -1,48 +1,48 @@
 let etapas = [
     {
-        titulo: 'VEREADOR',
-        numeros: 5,
+        titulo: 'GOVERNADOR',
+        numeros: 2,
         candidatos: [
             {
-                numero: '38111',
-                nome: 'Fulano de Tal',
-                partido: 'ABC',
+                numero: '22',
+                nome: 'Jorginho Mello',
+                partido: 'PL',
                 fotos:[
-                    {url:'38111.jpg', legenda: 'Vereador'}
+                    {url:'jorginhoMello.jpg', legenda: 'Governador'}
                 ]
             },
             {
-                numero: '77222',
-                nome: 'Beltrano da Silva',
-                partido: 'DEFG',
+                numero: '13',
+                nome: 'Décio Lima',
+                partido: 'PT',
                 fotos:[
-                    {url:'77222.jpg', legenda: 'Vereador'}
+                    {url:'DecioLima.jpg', legenda: 'Governador'}
                 ]
             },
         ]
     },
     {
-        titulo: 'PREFEITO',
+        titulo: 'PRESIDENTE',
         numeros: 2,
         candidatos: [
             {
-                numero: '99',
-                nome: 'Ciclano',
-                partido: 'ABC',
-                vice: 'Cic',
+                numero: '22',
+                nome: 'Bolsonaro',
+                partido: 'PL',
+                vice: 'Braga Netto',
                 fotos:[
-                    {url:'99.jpg', legenda: 'Prefeito'},
-                    {url:'99_2.jpg', legenda: 'Vice-Prefeito', small: true}
+                    {url:'Bolsonaro.jpeg', legenda: 'Presidente'},
+                    {url:'BragaNetto.jpeg', legenda: 'Vice-Presidente', small: true}
                 ]
             },
             {
-                numero: '84',
-                nome: 'Zulano',
-                partido: 'QWERTY',
-                vice: 'Zul',
+                numero: '13',
+                nome: 'Lula',
+                partido: 'PT',
+                vice: 'Geraldo Alckmin',
                 fotos:[
-                    {url:'84.jpg', legenda: 'Prefeito'},
-                    {url:'84_2.jpg', legenda: 'Vice-Prefeito', small: true}
+                    {url:'Lula.jpeg', legenda: 'Presidente'},
+                    {url:'Alckmin.jpg', legenda: 'Vice-Presidente', small: true}
                 ]
             },
         ]
