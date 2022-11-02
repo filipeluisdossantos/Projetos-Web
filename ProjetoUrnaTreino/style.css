@@ -140,3 +140,9 @@ body {
     font-size: 14px;
     padding-left: 10px;
 }
+
+
+.aviso--grande {
+    font-size: 30px;
+    font-weight: bold;
+}
