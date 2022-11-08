@@ -144,3 +144,9 @@
    font-weight: bold;
    margin-top: 15px;
 }
+.aviso--gigante {
+   font-size: 70px;
+   font-weight: bold;
+   text-align: center;
+   margin: auto;
+}
