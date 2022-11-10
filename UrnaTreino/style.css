@@ -83,19 +83,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
 }
 .imagem-candidato {
     text-align: center;
     font-size: 14px;
+    border: 1px solid #000;
 }
 .imagem-candidato img {
     width: 100%;
     text-align: center;
+
 }
 .imagem-candidato span {
     line-height: 1.5;
 }
-.imagem-candidato.small img {
+.imagem-candidato.small {
     width: 90%;
 }
 .imagem-candidato.small span {
