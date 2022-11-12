@@ -12,7 +12,22 @@
         <div class="tela">
             <div class="divisao-1">
                 <div class="divisao-1-left">
-                    ...
+                    <div class="seuvotopara">
+                        <span>SEU VOTO PARA</span>
+                    </div>
+                    <div class="cargo">
+                        <span>PRESIDENTE</span>
+                    </div>
+                    <div class="numero">
+                        <span>Número:</span>
+                        <div class="digito pisca"></div>
+                        <div class="digito"></div>
+                    </div>
+                    <div class="descricao">
+                        Nome: Bolsonaro <br>
+                        Partido: PL <br>
+                        Vice: Braga Netto
+                    </div>
                 </div>
                 <div class="divisao-1-right">
                     <div class="foto-candidato">
@@ -34,27 +49,27 @@
             </div>
             <div class="part-2">
                 <div class="teclado--linha">
-                    <div class="botao">1</div>
-                    <div class="botao">2</div>
-                    <div class="botao">3</div>
+                    <div class="botao" onclick="clicou('1')">1</div>
+                    <div class="botao" onclick="clicou('2')">2</div>
+                    <div class="botao" onclick="clicou('3')">3</div>
                 </div>
                 <div class="teclado--linha">
-                    <div class="botao">4</div>
-                    <div class="botao">5</div>
-                    <div class="botao">6</div>
+                    <div class="botao" onclick="clicou('4')">4</div>
+                    <div class="botao" onclick="clicou('5')">5</div>
+                    <div class="botao" onclick="clicou('6')">6</div>
                 </div>
                 <div class="teclado--linha">
-                    <div class="botao">7</div>
-                    <div class="botao">8</div>
-                    <div class="botao">9</div>
+                    <div class="botao" onclick="clicou('7')">7</div>
+                    <div class="botao" onclick="clicou('8')">8</div>
+                    <div class="botao" onclick="clicou('9')">9</div>
                 </div>
                 <div class="teclado--linha">
-                    <div class="botao">0</div>
+                    <div class="botao" onclick="clicou('0')">0</div>
                 </div>
                 <div class="teclado--linha">
-                    <div class="botao branco">BRANCO</div>
-                    <div class="botao corrige">CORRIGE</div>
-                    <div class="botao confirma">CONFIRMA</div>
+                    <div class="botao branco" onclick="branco()">BRANCO</div>
+                    <div class="botao corrige" onclick="corrige()">CORRIGE</div>
+                    <div class="botao confirma" onclick="confirma()">CONFIRMA</div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,9 @@
+@keyframes pisca {
+    0% {opacity: 0.2;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,12 +36,54 @@ body {
 }
 .divisao-1-left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+.seuvotopara {
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.cargo {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;    
+}
+.numero {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.numero span {
+    font-size: 15px;
+}
+.digito {
+    border: 1px solid #000;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 25px;
+    margin-left: 3px;
+}
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.descricao {
+    flex: 1;
+    line-height: 30px;
+    font-size: 15px;
 }
 .divisao-1-right {
     width: 90px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
 }
 .foto-candidato {
     border: 1px solid #000;
@@ -126,4 +174,26 @@ body {
     color: #6B5C5E;
     font-size: 12px;
     line-height: 40px;
+}
+.aviso--grande {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.aviso--pequeno {
+    font-size: 15px;
+    color: red;
+}
+.aviso--normal {
+    font-size: 17px;
+}
+.aviso--normal span {
+    font-weight: bold;
+    color: #FF9853;
+}
+.aviso--gigante {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
 }
