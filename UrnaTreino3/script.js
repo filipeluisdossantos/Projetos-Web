@@ -95,7 +95,7 @@ function branco() {
         lateral.innerHTML = '';
     } else {
         seuVotoPara.style.display = 'none';
-        descricao.innerHTML = '<div class="aviso--pequeno pisca">Para Voto em Branco não pode ter digitado números</div>Aperte a Tecla: CORRIGE para REINICIAR novamente';
+        descricao.innerHTML = '<div class="aviso--pequeno pisca">Para Voto em Branco não pode ser digitado números</div>Aperte a Tecla: <span style="color:#FF9853; font-weight:bold">CORRIGE</span> para REINICIAR novamente';
         aviso.style.display = 'none';
         lateral.innerHTML = '';
     }
@@ -120,12 +120,14 @@ function confirma() {
             etapa: etapas[etapaAtual].titulo,
             voto: 'nulo'
         });
-    } else {
+    } else if(numeroDigitado.length == etapas[etapaAtual].numeros) {
         votoConfirmado = true;
         votos.push({
             etapa: etapas[etapaAtual].titulo,
             voto: numeroDigitado
         });
+    } else {
+        descricao.innerHTML = '<div class="aviso--pequeno pisca">Favor digitar todos os números</div>';
     }
     if(votoConfirmado) {
         etapaAtual++;
