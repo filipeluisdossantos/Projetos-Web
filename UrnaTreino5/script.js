@@ -128,7 +128,10 @@ function confirma() {
         if(etapas[etapaAtual] !== undefined) {
             comecarEtapa();
         } else {
+            let fim = new Audio();
+            fim.src = 'assets/fim.mp3';
             document.querySelector('.tela').innerHTML = `<div class="descricao--gigante pisca">FIM</div>`;
+            document.querySelector('.botao.confirma').addEventListener('click', fim.play());
             console.log(votos);
         }
         
