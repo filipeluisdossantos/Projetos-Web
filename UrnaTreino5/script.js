@@ -104,6 +104,8 @@ function corrige() {
 
 function confirma() {
     let votoConfirmado = false;
+    let fimAudio = new Audio();
+
     if(votoBranco == true) {
         votoConfirmado = true;
         votos.push({
@@ -124,14 +126,15 @@ function confirma() {
         });
     }
     if(votoConfirmado) {
+        fimAudio.src = 'assets/votacao.mp3';
+        fimAudio.play();
         etapaAtual++;
         if(etapas[etapaAtual] !== undefined) {
             comecarEtapa();
         } else {
-            let fim = new Audio();
-            fim.src = 'assets/fim.mp3';
+            fimAudio.src = 'assets/fim.mp3';
+            fimAudio.play();
             document.querySelector('.tela').innerHTML = `<div class="descricao--gigante pisca">FIM</div>`;
-            document.querySelector('.botao.confirma').addEventListener('click', fim.play());
             console.log(votos);
         }
         
