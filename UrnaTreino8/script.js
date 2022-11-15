@@ -126,15 +126,16 @@ function confirma() {
         });
     }
     if(votoConfirmado) {
+        audio.src = 'assets/media/votacao.mp3';
+        audio.play();
         etapaAtual++;
         if(etapas[etapaAtual] !== undefined) {
-            audio.src = 'assets/media/votacao.mp3';
-            audio.play();
             comecarEtapa();
         } else {
             audio.src = 'assets/media/fim.mp3';
             audio.play();
             document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
+            console.log(votos);
         }
         
     }
