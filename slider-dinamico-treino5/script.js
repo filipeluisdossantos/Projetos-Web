@@ -4,11 +4,10 @@ document.querySelector('.slide-area').style.width = `calc(100vw * ${totalSlides}
 
 var slideAtual = 0;
 
-
 function voltar() {
     slideAtual--;
     if(slideAtual < 0) {
-        slideAtual = totalSlides -1;
+        slideAtual = totalSlides - 1;
     }
     atualizarMargem();
 }
@@ -23,9 +22,9 @@ function avancar() {
 
 function atualizarMargem() {
     let slideItemWidth = document.querySelector('.slide-item').clientWidth;
-    let newMargin = (slideAtual * slideItemWidth);
+    let novaMargem = slideAtual * slideItemWidth;
 
-    document.querySelector('.slide-area').style.marginLeft = `-${newMargin}px`;
+    document.querySelector('.slide-area').style.marginLeft = `-${novaMargem}px`;
 }
 
-setInterval(avancar, 5000);
+setInterval(avancar,5000);

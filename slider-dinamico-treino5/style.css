@@ -5,24 +5,23 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 header {
+    background-color: #ccc;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: #ccc;
 }
 .header-topo {
     height: 80px;
-    background-color: rgb(223, 226, 43);
+    background-color: #555;
 }
 .header-slide {
     flex: 1;
-    overflow: hidden;
 }
-.controles {
+.controle-area {
     position: absolute;
     z-index: 99;
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,24 +30,25 @@ header {
 .controle {
     width: 40px;
     height: 40px;
+    background-color: #ccc;
     border-radius: 20px;
-    background-color: rgb(204, 204, 204);
     text-align: center;
     line-height: 40px;
-    font-size: 30px;
-    font-weight: bold;
-    opacity: 0.6;
+    font-size: 35px;
+    font-weight: bolder;
+    opacity: 0.7;
+    color: #fff;
     cursor: pointer;
 }
 .slide-area {
     display: flex;
-    /*width: calc(100vw * 3); adicionado de forma dinâmica pelo js*/
+    /*width: calc(100vw * 3); add de forma dinâmica pelo js*/
     height: 100%;
-    transition: all ease 0.9s;
+    transition: all ease 1s;
 }
 .slide-item {
     width: 100vw;
-    height: inherit;
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
