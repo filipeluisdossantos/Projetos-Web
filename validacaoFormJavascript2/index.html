@@ -8,6 +8,8 @@
     <title>Validador de Formulário</title>
 </head>
 <body>
+    <!--O Html5 já realiza o processo de validação quando colocamos os atributos (required, min-lenght) nos inputs, input do type: email (realiza a verificação se é um email válido) input de tipo senha mostra digitos em forma de *****-->
+    <!--Mas aqui vamos criar uma validação manual com o JavaScript-->
     <div class="screen">
         <div class="leftside">
             <img src="images/financial_data.png" alt="">
@@ -15,23 +17,24 @@
         <div class="rightside">
             <h1>Crie uma conta</h1>
 
-            <form class="b7validator" method="post" action="">
+            <form class="B7Validator" action="" method="post">
                 <label for="">
                     Seu nome: <br>
-                    <input type="text" name="name" data-rules="min=2">
+                    <input type="text" name="name" data-rules="required|min=2">
                 </label>
                 <label for="">
                     Seu e-mail: <br>
                     <input type="text" name="email" data-rules="required|email">
                 </label>
                 <label for="">
-                    Sua senha:
-                    <input type="password" name="password" data-rules="min=4">
+                    Sua senha: <br>
+                    <input type="text" name="password" data-rules="min=6">
                 </label>
                 <label for="">
                     <input type="submit" value="Cadastrar">
                 </label>
             </form>
+
             <div>
                 Já tem um conta? <a href="">Faça o Login</a>
             </div>

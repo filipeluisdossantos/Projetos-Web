@@ -14,31 +14,33 @@
     align-items: center;
 }
 .leftside img {
-   max-width: 500px;
-   height: auto;
+    max-width: 500px;
 }
 .rightside {
     width: 400px;
-    background-color: #ddd;
+    background-color: #ccc;
     padding: 50px;
 }
-.rightside label  {
+.rightside h1 {
+    margin-bottom: 20px;
+}
+.rightside label {
     display: block;
     margin-bottom: 20px;
 }
 .rightside input {
     width: 100%;
     border: 1px solid #999;
-    border-radius: 3px;
-    font-size: 14px;
+    border-radius: 5px;
     padding: 8px;
+    font-size: 14px;
     outline: 0;
 }
-
 .error {
     font-size: 11px;
     background-color: #ff0000;
-    color: #fff;
     padding: 4px;
-    border-radius: 3px;
+    border-radius: 5px;
+    color: #fff;
 }
+
