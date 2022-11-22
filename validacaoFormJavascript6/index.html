@@ -10,19 +10,19 @@
 <body>
     <section class="screen">
         <div class="leftside">
-            <img src="images/financial_data.png" alt="">
+            <img src="images/financial_data.png" alt="imagem de uma tela de computador">
         </div>
         <div class="rightside">
             <h1>Crie uma conta</h1>
 
-            <form class="B7Validator" action="cadastro.php" method="post">
+            <form class="validatorjs" action="cadastro.php" method="post">
                 <label for="">
                     Seu nome: <br>
-                    <input type="text" name="name" id="" data-rules="min=2">
+                    <input type="text" name="name" data-rules="min=2">
                 </label>
                 <label for="">
                     Seu e-mail: <br>
-                    <input type="text" name="email" id="" data-rules="required|email">
+                    <input type="text" name="email" data-rules="required|email">
                 </label>
                 <label for="">
                     Sua senha: <br>
@@ -32,11 +32,10 @@
                     <input type="submit" value="Cadastrar">
                 </label>
             </form>
-            <div>
-                Já tem uma conta? <a href="">Faça seu login</a>
-            </div>
+            <div>Já tem uma conta? <a href="" style="color:#2e7c5f ;">Faça seu login</a></div>
         </div>
     </section>
+
 
     <script src="script.js"></script>
 </body>

@@ -16,7 +16,6 @@
 }
 .leftside img {
     width: 80%;
-    min-width: 300px;
 }
 .rightside {
     width: 400px;
@@ -30,24 +29,24 @@
     display: block;
     margin-bottom: 20px;
 }
-.rightside form input {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    outline: 0;
-}
 .rightside label:last-child input {
-    cursor: pointer;
-    background-color:#57B894;
+    background-color: #57B894;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
+}
+.rightside form input {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;
 }
 .error {
-    background-color: #f55454;
+    background-color: #fa5e5e;
+    border-radius: 5px;
     color: #fff;
     font-size: 11px;
     padding: 3px;
-    border-radius: 5px;
 }
