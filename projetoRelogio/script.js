@@ -1,26 +1,26 @@
-let digitalElement = document.querySelector('.digital');
+let digitalClock = document.querySelector('.digital');
 let secondPointer = document.querySelector('.p_s');
 let minutePointer = document.querySelector('.p_m');
 let hourPointer = document.querySelector('.p_h');
 
-function updateClock(){
+
+function updateClock() {
     let time = new Date();
-    let hours = time.getHours();
-    let minutes = time.getMinutes();
-    let seconds = time.getSeconds();
+    let second = time.getSeconds();
+    let minute = time.getMinutes();
+    let hour = time.getHours();
 
-    digitalElement.innerHTML = `${fixZero(hours)}:${fixZero(minutes)}:${fixZero(seconds)}`;
+    digitalClock.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(second)}`;
 
-    let hDeg = ((360 / 12) * hours -90) + (0.5 * minutes);
-    let mDeg = (360 / 60) * minutes -90;
-    let sDeg = (360 / 60) * seconds -90;
-
-    hourPointer.style.transform = `rotate(${hDeg}deg)`;
-    minutePointer.style.transform = `rotate(${mDeg}deg)`;
+    let sDeg = (360 / 60) * second -90;
+    let mDeg = (360 / 60) * minute -90;
+    let hDeg = ((360 / 12) * hour -90) + ((30 / 60) * minute);
     secondPointer.style.transform = `rotate(${sDeg}deg)`;
+    minutePointer.style.transform = `rotate(${mDeg}deg)`;
+    hourPointer.style.transform = `rotate(${hDeg}deg)`;
 }
 
-function fixZero(t) {
+function fixZero(t){
     if(t < 10) {
         return `0${t}`;
     } else {
