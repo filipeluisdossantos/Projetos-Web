@@ -25,6 +25,8 @@ document.querySelector('.busca').addEventListener('submit',async(e)=>{
         } else {
             showWarning('Cidade não encontrada.')
         }
+    } else {
+        clearInfo();
     }
 });
 

@@ -49,6 +49,7 @@ h1 {
     border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
+    outline: 0;
 }
 .busca button:hover {
     background-color:#004983 ;
