@@ -198,3 +198,251 @@ body {
     text-align: center;
     margin: auto;
 }
+
+@media (max-width: 850px) {
+    .tela {
+        width: 400px;
+        height: 200px;
+    }
+    .seuvotopara {
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .cargo {
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    .numeros {
+        line-height: 40px;
+    }
+    .numeros span {
+        font-size: 12px;
+    }
+    .digito {
+        width: 25px;
+        height: 30px;
+        margin-left: 3px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .divisao-1-right {
+        width: 60px;
+    }
+    .foto-candidato {
+        font-size: 10px;
+    }
+    .foto-candidato.small {
+        width: 90%;
+        font-size: 10px;
+    }
+    .foto-candidato img {
+        width: 100%;
+    }
+    .divisao-2 {
+        height: 40px;
+        border-top: 1px solid #000;
+        font-size: 10px;
+        padding: 1px 0 0 5px;
+    }
+    .descricao {
+        line-height: 20px;
+        font-size: 12px;
+    }
+  
+ 
+    .teclado--linha:last-child {
+        padding-top: 0px;
+        padding-bottom: 27px;
+    }
+
+    
+    .aviso--grande {
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .aviso--branco {
+        font-size: 15px;
+        margin-top: 40px;
+    }
+    .aviso--gigante {
+        font-size: 50px;
+    }
+    .teclado {
+        margin-left: 10px;
+    }
+    .botao {
+        width: 30px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 15px;
+        margin: 7px;
+        text-align: center;
+        box-shadow: 2px 3px 2px #000;
+    }
+    .branco {
+        background-color: #fff;
+        color: #6B5C5E;
+        width: 48px;
+        height: 25px;
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .corrige {
+        background-color: #FF9853;
+        color: #6B5C5E;
+        width: 48px;
+        height: 25px;
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .confirma {
+        width: 57px;
+        height: 30px;
+        font-size: 10px;
+        line-height: 30px;
+    }
+    
+    .aviso--grande {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    .aviso--branco {
+        font-size: 30px;
+        margin-top: 65px;
+    }
+    .parte-1-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .teclado--parte-1 span {
+        font-size: 18px;
+    }
+    .teclado--parte-1 {
+        padding: 5px;
+    }
+    .teclado--parte-2 {
+        padding: 5px;
+    }
+}
+
+@media(max-width:675px) {
+
+    .urna {
+        flex-direction: column;
+        align-items: center;
+    }
+    body{
+        display: block;
+    }  
+    
+    .tela {
+        width: 100%;
+    }
+    .teclado {
+        width: 40%;
+        margin-left: 0px;
+    }
+    
+}
+@media(max-width:560px) {
+   
+    .tela {
+        width: 90%;
+    }
+    .teclado {
+        width: 60%;
+        margin-left: 0px;
+    }
+
+    .seuvotopara {
+        height: 20px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+    .cargo {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .numeros {
+        line-height: 50px;
+    }
+    .numeros span {
+        font-size: 10px;
+    }
+    .digito {
+        width: 20px;
+        height: 25px;
+        margin-left: 2px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .divisao-1-right {
+        width: 60px;
+    }
+    .foto-candidato {
+        font-size: 10px;
+    }
+    .foto-candidato.small {
+        width: 90%;
+        font-size: 10px;
+    }
+    .foto-candidato img {
+        width: 100%;
+    }
+    .divisao-2 {
+        height: 40px;
+        border-top: 1px solid #000;
+        font-size: 10px;
+        padding:2px 0 0 5px;
+    }
+    .descricao {
+        line-height: 21px;
+        font-size: 10px;
+    }
+  
+ 
+    .teclado--linha:last-child {
+        padding-top: 0px;
+        padding-bottom: 7px;
+    }
+
+    
+    .aviso--grande {
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .aviso--branco {
+        font-size: 15px;
+        margin-top: 40px;
+    }
+    .aviso--gigante {
+        font-size: 50px;
+    }
+}
+@media(max-width:400px) {
+   
+    .urna {
+        padding: 10px;
+    }
+    .tela {
+        width: 100%;
+        margin: 5px 0 15px 0;
+        
+    }
+    .teclado {
+        width: 70%;
+        margin-left: 0px;
+    }
+   
+}
