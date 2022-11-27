@@ -377,23 +377,49 @@ body {
     .urna {
         padding: 20px 0;
     }
-    
     .teclado {
-        width: 50%;
+        width: 60%;
+        margin-left: 0px;
+    }
+    .botao {
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        margin: 7px;
+        box-shadow: 3px 4px 2px #000;
+    }
+    .branco {
+        width: 58px;
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    .corrige {
+        width: 58px;
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    .confirma {
+        width: 67px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+    .teclado--linha:last-child {
+        padding-bottom: 18px;
     }
 }
 @media(max-width:400px) {
    
     .urna {
-        padding: 10px;
+        padding: 7px;
     }
     .tela {
         width: 100%;
-        
-    }
-    .teclado {
-        width: 60%;
-        margin-left: 0px;
+        height: 35%;
+        margin-bottom: 20px;
     }
     .seuvotopara {
         font-size: 11px;
@@ -419,12 +445,16 @@ body {
         height: 45px;
     }
     .aviso--branco {
-        font-size: 25px;
+        font-size: 22px;
+        margin-top: 30px;
     }
     .aviso--grande {
-        font-size: 25px;
+        font-size: 22px;
     }
     .aviso--gigante {
         font-size: 50px;
+    }
+    .teclado {
+        width: 82%;
     }
 }
