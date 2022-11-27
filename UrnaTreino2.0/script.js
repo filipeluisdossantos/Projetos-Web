@@ -94,7 +94,7 @@ function branco() {
         aviso.style.display = 'block';
         lateral.innerHTML = '';
     } else {
-        descricao.innerHTML = `<div class="aviso--pequeno pisca">Para voto em BRANCO não pode ser digitado número</div><div class="aviso--pequeno--corrige">Aperte a tecla: <span>CORRIGE</span> para REINICIAR o voto</div>`;
+        descricao.innerHTML = `<div class="aviso--pequeno pisca">Para voto em BRANCO não pode ser digitado números</div><div class="aviso--pequeno--corrige">Aperte a tecla: <span>CORRIGE</span> para REINICIAR.</div>`;
     }
 }
 
