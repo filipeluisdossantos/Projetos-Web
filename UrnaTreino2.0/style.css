@@ -103,7 +103,6 @@ body {
 }
 .teclado {
     margin-left: 30px;
-    border: 1px solid #6B5C5E;;
 }
 .teclado--parte-1 {
     background-color: #F0EDE4;
@@ -111,6 +110,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: 1px solid #6B5C5E;
 }
 .parte-1-logo {
     width: 60px;
@@ -125,6 +125,7 @@ body {
     text-align: end;
 }
 .teclado--parte-2 {
+    border: 1px solid #6B5C5E;
     background-color: #483F40;
     padding: 10px;
 }
@@ -263,8 +264,8 @@ body {
         text-align: center;
     }
     .aviso--branco {
-        font-size: 15px;
-        margin-top: 40px;
+        font-size: 20px;
+        margin-top: 30px;
     }
     .aviso--gigante {
         font-size: 50px;
@@ -309,10 +310,7 @@ body {
         font-weight: bold;
         margin-top: 15px;
     }
-    .aviso--branco {
-        font-size: 30px;
-        margin-top: 65px;
-    }
+    
     .parte-1-logo {
         width: 40px;
         height: 40px;
@@ -415,6 +413,10 @@ body {
         font-size: 12px;
         height: 45px;
     }
+    .aviso--branco {
+        font-size: 30px;
+        margin-top: 20px;
+    }
     .aviso--gigante {
         font-size: 60px;
     }
@@ -430,6 +432,10 @@ body {
     }
     .teclado--parte-1 span {
         font-size: 17px;
+    }
+    .aviso--branco {
+        font-size: 22px;
+        margin-top: 18px;
     }
   
     
@@ -465,8 +471,7 @@ body {
         font-size: 11px;
     }
     .aviso--branco {
-        font-size: 22px;
-        margin-top: 30px;
+        margin-top: 15px;
     }
     .aviso--grande {
         font-size: 22px;
