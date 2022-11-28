@@ -344,12 +344,12 @@ body {
     
     .tela {
         width: 80%;
-        height: 45%;
+        height: 40%;
         margin: 20px 0;
     }
     .teclado {
         width: 40%;
-        height: 50%;
+        height: 45%;
         margin-left: 0px;
         margin-bottom: 20px;
     }
@@ -358,13 +358,47 @@ body {
     }
     .teclado--linha:last-child {
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    .botao {
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 18px;
+        margin: 9px 12px;
+        box-shadow: 3px 4px 2px #000;
+    }
+    .branco {
+        width: 58px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 30px;
+    }
+    .corrige {
+        width: 58px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 30px;
+    }
+    .confirma {
+        width: 67px;
+        height: 35px;
+        font-size: 11px;
+        line-height: 35px;
     }
     .seuvotopara {
+        height: 40px;
+        line-height: 40px;
         font-size: 13px;
     }
     .cargo {
+        height: 45px;
+        line-height: 45px;
         font-size: 20px;
+    }
+    .numeros {
+        height: 40px;
+        line-height: 40px;
     }
     .numeros span {
         font-size: 13px;
@@ -373,12 +407,13 @@ body {
        font-size: 20px;
     }
     .descricao {
+        margin-top: 10px;
         font-size: 13px;
-        line-height: 22px;
+        line-height: 30px;
     }
     .divisao-2 {
-        font-size: 11px;
-        height: 40px;
+        font-size: 12px;
+        height: 45px;
     }
     .aviso--gigante {
         font-size: 60px;
@@ -386,49 +421,18 @@ body {
 }
 @media(max-width:560px) {
     
-    .tela {
-        margin: 10px;
-    }
     .teclado {
         width: 60%;
         margin-left: 0px;
     }
+    .teclado--parte-1 {
+        padding: 6px;
+    }
     .teclado--parte-1 span {
         font-size: 17px;
     }
-    .teclado--parte-2 {
-        padding-top: 5px;
-    }
-    .teclado--linha:last-child {
-        padding-top: 0;
-        padding-bottom: 7px;
-    }
-    .botao {
-        width: 50px;
-        height: 25px;
-        line-height: 25px;
-        font-size: 18px;
-        margin: 7px 12px;
-        box-shadow: 3px 4px 2px #000;
-    }
-    .branco {
-        width: 58px;
-        height: 25px;
-        font-size: 11px;
-        line-height: 25px;
-    }
-    .corrige {
-        width: 58px;
-        height: 25px;
-        font-size: 11px;
-        line-height: 25px;
-    }
-    .confirma {
-        width: 67px;
-        height: 30px;
-        font-size: 11px;
-        line-height: 30px;
-    }
+  
+    
 }
 @media(max-width:400px) {
    
@@ -445,6 +449,7 @@ body {
         font-size: 15px;
     }
     .numeros {
+        height: 40px;
         line-height: 50px;
     }
     .numeros span {
@@ -455,11 +460,9 @@ body {
     }
     .descricao {
         font-size: 11px;
-        line-height: 20px;
     }
     .divisao-2 {
         font-size: 11px;
-        height: 45px;
     }
     .aviso--branco {
         font-size: 22px;
@@ -473,5 +476,8 @@ body {
     }
     .teclado {
         width: 82%;
+    }
+    .teclado--linha:last-child {
+        padding-top: 5px;
     }
 }
