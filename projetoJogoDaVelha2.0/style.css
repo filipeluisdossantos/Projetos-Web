@@ -18,13 +18,13 @@ h1 {
     color: #FFF;
     margin: 20px 0;
 }
-form {
+.players {
     display: flex;
     flex-direction: column;
     color: #fff;
 }
 
-form input {
+.players input {
     width: 150px;
     outline: 0;
     color: #333;
@@ -54,12 +54,6 @@ form input {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.item.t {
-    border-top: 1px solid #FFF;
-}
-.item.l {
-    border-left: 1px solid #FFF;
-}
 .item.r {
     border-right: 1px solid #FFF;
 }
@@ -96,6 +90,10 @@ form input {
     margin-top: 20px;
     cursor: pointer;
 }
-.reset.novoJogador {
-    background-color: #555;
+
+.novoJogador {
+    background-color: rgba(66, 118, 231, 0.993);
+}
+.cor {
+    background-color: rgba(12, 49, 12, 0.671);
 }

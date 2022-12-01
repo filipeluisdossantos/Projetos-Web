@@ -7,13 +7,13 @@ let games = {
 let player = '';
 let warning = '';
 let playing = false;
-let player1 = document.querySelector('.jogador1');
-let player2 = document.querySelector('.jogador2');
-let nome1 = '';
-let nome2 = '';
+let input1 = document.querySelector('.jogador1');
+let input2 = document.querySelector('.jogador2');
+let name1 = '';
+let name2 = '';
 
 //Events
-document.querySelector('.iniciar').addEventListener('click', iniciar);
+document.querySelector('.iniciar').addEventListener('click', start);
 document.querySelector('.reiniciar').addEventListener('click', restart);
 document.querySelectorAll('.item').forEach(item => {
     item.addEventListener('click', clickedItem);
@@ -32,10 +32,12 @@ function clickedItem(e) {
     }
 }
 
-function iniciar(e) {
-    e.preventDefault();
+function start() {
     let random = Math.floor(Math.random() * 2);
     player = (random === 0) ? 'x' : 'o';
+    
+    name1 = input1.value;
+    name2 = input2.value;
     restart();
 }
 
@@ -45,13 +47,22 @@ function restart() {
     }
     
     warning = '';
-    nome1 = player1.value;
-    nome2 = player2.value;
-
-    if(nome1 && nome2 !== '') {
+    
+    if(name1 && name2 !== '') {
         playing = true;
+
+        let item = document.querySelector('.iniciar');
+        item.classList.add('cor');
+        item.innerHTML = 'Jogando...';
         renderGame();
         renderInfo();
+    } else {
+        playing = false;
+
+        let item = document.querySelector('.iniciar');
+        item.classList.remove('cor');
+        item.innerHTML = 'Iniciar';
+        renderGame();
     }
 }
 
@@ -59,8 +70,7 @@ function renderGame() {
     for(let i in games) {
         let item = document.querySelector(`div[data-item=${i}]`);
         item.innerHTML = games[i];
-    }
-
+    }  
     checkGame();
 }
 
@@ -83,10 +93,10 @@ function togglePlayer() {
 
 function checkGame() {
     if(winner('x')) {
-        warning = `${nome1} Venceu.`;
+        warning = `${name1} Venceu.`;
         playing = false;
     } else if(winner('o')) {
-        warning = `${nome2} Venceu`;
+        warning = `${name2} Venceu`;
         playing = false;
     } else if(isfull()) {
         warning = 'Deu empate.';
@@ -129,6 +139,10 @@ function isfull() {
 }
 
 function clearPlayers() {
-    nome1 = '';
-    nome2 = '';
+    input1.value = '';
+    input2.value = '';
+    player = '';
+    warning = '';
+    renderInfo();
+    start();
 }
