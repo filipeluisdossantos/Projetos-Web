@@ -27,7 +27,7 @@ h1 {
 .players input {
     width: 150px;
     outline: 0;
-    color: #333;
+    color: rgba(66, 118, 231, 0.993);
     font-size: 15px;
     font-weight: bolder;
     padding: 3px;
@@ -96,4 +96,12 @@ h1 {
 }
 .cor {
     background-color: rgba(12, 49, 12, 0.671);
+}
+.iniciar-limpar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.iniciar-limpar button {
+    width: 100px;
 }
